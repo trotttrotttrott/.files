@@ -1,18 +1,8 @@
-# export PATH=$PATH:~/springsource/grails-1.3.6/bin
-# export PATH=$PATH:/usr/local/Cellar/nginx/1.0.5/sbin
-
-export PATH=$PATH:/usr/local/mysql/bin # mysql
-
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export USER='trotttrotttrott'
 
 export PS1='\[\033[01;34m\] \w\[\033[01;32m\]\[\033[01;34m\]\[\033[01;35m\] $(~/.rvm/bin/rvm-prompt)$(__git_ps1 " (%s)") \[\033[01;34m\]\$ \[\033[00m\]'
 
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
-
-export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home/'
-
-# We're using 64 bits, right?
-export ARCHFLAGS="-arch x86_64"
+export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home/' # jruby gets mad without this :\
 
 # Editor
 export EDITOR=vim
@@ -20,9 +10,6 @@ export VISUAL=$EDITOR
 
 # Ignore from history repeat commands, and some other unimportant ones
 export HISTIGNORE="&:[bf]g:c:exit"
-
-# Ruby development made easier
-export RUBYOPT="rubygems Ilib Itest Ispec"
 
 # Use vim to browse man pages. One can use Ctrl-[ and Ctrl-t
 # to browse and return from referenced man pages. ZZ or q to quit.
@@ -35,10 +22,7 @@ if ((${BASH_VERSINFO[0]} >= 4)) && ! shopt globstar >/dev/null; then
   shopt -s globstar # recursive globs fuck yes!
 fi
 
-# ec2
-source ~/.ec2/keys_and_secrets.sh
-
-# git completion
+# bash completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
@@ -56,11 +40,17 @@ hitch() {
 
 alias unhitch='hitch -u'
 
+# aliases
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
-# open your biz apps
+# ec2
+if [ -f ~/.ec2/keys_and_secrets.sh ]; then
+  . ~/.ec2/keys_and_secrets.sh
+fi
+
+# this doesn't work very well :(
 bizapps() {
 osascript <<-END
   tell application "Mail"
