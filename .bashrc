@@ -2,6 +2,8 @@ export USER='trotttrotttrott'
 
 export PS1='\[\033[01;34m\] \w\[\033[01;32m\]\[\033[01;34m\]\[\033[01;35m\] $(~/.rvm/bin/rvm-prompt)$(__git_ps1 " (%s)") \[\033[01;34m\]\$ \[\033[00m\]'
 
+export DYLD_LIBRARY_PATH='/usr/local/mysql/lib/'
+
 export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home/' # jruby gets mad without this :\
 
 # Editor

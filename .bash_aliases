@@ -44,6 +44,6 @@ alias f_u_svn='find ./ -name ".svn" | xargs rm -Rf'
 alias get_external_ip="curl -L -s --max-time 10 http://checkip.dyndns.org | egrep -o -m 1 '([[:digit:]]{1,3}\.){3}[[:digit:]]{1,3}'"
 
 # project aliases
-if [ -f ~/.bash_project_aliases ]; then
-  . ~/.bash_project_aliases
+if [ -f ~/.bash_project_shortcuts ]; then
+  . ~/.bash_project_shortcuts
 fi
