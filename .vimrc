@@ -31,7 +31,6 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
     set backspace=indent,eol,start " make backspace a more flexible
     set backup " make backup files
     set backupdir=~/.vim/backup " where to put backup files
-    set clipboard+=unnamed " share windows clipboard
     set directory=~/.vim/tmp " directory to place swap files in
     set fileformats=unix,dos,mac " support all three, in this order
     set hidden " you can change buffers without saving
