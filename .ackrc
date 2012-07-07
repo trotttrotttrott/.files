@@ -1,0 +1,10 @@
+--sort-files
+--color
+--context=1
+--follow
+--group
+--smart-case
+--type-add=ruby=.haml,.erb,.rake,.scss,.sass,.feature,.js
+
+--type-set=DUMB=.git
+--noDUMB
