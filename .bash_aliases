@@ -1,15 +1,3 @@
-################ scripts
-
-alias t='ruby ~/tasks/tasks.rb'
-
-################ cd
-
-# config shortcuts
-alias nginx_conf='cd /usr/local/etc/nginx'
-alias apache2='cd /private/etc/apache2'
-
-################ helpers
-
 # general
 alias ll='ls -la'
 alias ls='ls -G'
@@ -42,8 +30,3 @@ alias f_u_svn='find ./ -name ".svn" | xargs rm -Rf'
 
 # get external ip
 alias get_external_ip="curl -L -s --max-time 10 http://checkip.dyndns.org | egrep -o -m 1 '([[:digit:]]{1,3}\.){3}[[:digit:]]{1,3}'"
-
-# project aliases
-if [ -f ~/.bash_project_shortcuts ]; then
-  . ~/.bash_project_shortcuts
-fi

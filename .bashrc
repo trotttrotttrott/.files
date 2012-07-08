@@ -1,6 +1,6 @@
 export USER='trotttrotttrott'
 
-export PS1='\[\033[01;34m\] \w\[\033[01;32m\]\[\033[01;34m\]\[\033[01;35m\] $(~/.rvm/bin/rvm-prompt)$(__git_ps1 " (%s)") \[\033[01;34m\]\$ \[\033[00m\]'
+export PS1='\[\e[1;97m\]trotttrotttrott \[\e[0;97m\]\w $(~/.rvm/bin/rvm-prompt)\[\e[0;97m\]$(__git_ps1 " (%s)")\n\[\e[1;93m\]▸\[\e[1;92m\] '
 
 export DYLD_LIBRARY_PATH='/usr/local/mysql/lib/'
 
@@ -47,33 +47,12 @@ if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
+# projects
+if [ -f ~/.bash_projects ]; then
+  . ~/.bash_projects
+fi
+
 # ec2
 if [ -f ~/.ec2/keys_and_secrets.sh ]; then
   . ~/.ec2/keys_and_secrets.sh
 fi
-
-# this doesn't work very well :(
-bizapps() {
-osascript <<-END
-  tell application "Mail"
-    activate
-    set the bounds of the first window to {2560, 640, 3840, 1440}
-  end tell
-
-  tell application "iCal"
-    activate
-    set the bounds of the first window to {2560, 640, 3840, 1440}
-  end tell
-
-  tell application "Safari"
-    activate
-    set the bounds of the first window to {0, 0, 1180, 1440}
-  end tell
-
-  tell application "Skype"
-    activate
-  end tell
-END
-open 'http://pivotaltracker.com/dashboard'
-}
-
