@@ -53,6 +53,11 @@ if [ -f ~/.bash_projects ]; then
 fi
 
 # ec2
-if [ -f ~/.ec2/keys_and_secrets.sh ]; then
-  . ~/.ec2/keys_and_secrets.sh
+if [ -f ~/.ec2/env.sh ]; then
+  . ~/.ec2/env.sh
+fi
+
+# chef
+if [ -f ~/.chef/env.sh ]; then
+  . ~/.chef/env.sh
 fi
