@@ -1,6 +1,6 @@
 export USER='trotttrotttrott'
 
-export PS1='\[\e[1;97m\]trotttrotttrott \[\e[0;97m\]\w $(~/.rvm/bin/rvm-prompt)$(__git_ps1 " (%s)")\n(ಠ ಠ)\[\e[0;97m\]▸\[\e[1;92m\] '
+export PS1='\[\e[1;97m\]trotttrotttrott \[\e[0;97m\]\w $(~/.rvm/bin/rvm-prompt)$(__git_ps1 " (%s)")\n\[\e[0;97m\]▸\[\e[1;92m\] '
 
 export DYLD_LIBRARY_PATH='/usr/local/mysql/lib/'
 
@@ -45,6 +45,11 @@ alias unhitch='hitch -u'
 # aliases
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
+fi
+
+# functions
+if [ -f ~/.bash_functions ]; then
+  . ~/.bash_functions
 fi
 
 # projects
