@@ -1,5 +1,5 @@
 # general
-alias ll='ls -la'
+alias ll='ls -la -h'
 alias ls='ls -G'
 alias c='clear'
 alias g='git'
