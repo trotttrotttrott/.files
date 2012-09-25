@@ -130,11 +130,7 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
     " ROT13 - fun
     map <F12> ggVGg?
 
-    " space / shift-space scroll in normal mode
-    noremap <S-space> <C-b>
-    noremap <space> <C-f>
-
-    " Make Arrow Keys Useful Again {
+    " Make arrow keys do buffer stuff {
         map <down> :bn<RETURN>
         map <left> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
         map <right> :BufOnly<RETURN>
