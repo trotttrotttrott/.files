@@ -26,11 +26,6 @@ urldecode() {
   ruby -r cgi -e 'puts CGI.unescape ARGV[0]' "$1"
 }
 
-# Decode a urlencoded string ("%xx")
-urldecode() {
-  ruby -r cgi -e 'puts CGI.unescape ARGV[0]' "$1"
-}
-
 # open mvim for ack search results
 ackvim() {
   local pattern=$1; shift

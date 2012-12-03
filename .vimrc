@@ -3,6 +3,7 @@ call pathogen#infect()
 let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
 
 " Basics {
+    colorscheme vividchalk
     set nocompatible " explicitly get out of vi-compatible mode
     set noexrc " don't use local version of .(g)vimrc, .exrc
     set background=dark " we plan to use a dark background
@@ -32,6 +33,7 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
     set backup " make backup files
     set backupdir=~/.vim/backup " where to put backup files
     set directory=~/.vim/tmp " directory to place swap files in
+    set clipboard=unnamed " share clipboard
     set fileformats=unix,dos,mac " support all three, in this order
     set hidden " you can change buffers without saving
     set mouse=a " use mouse everywhere
@@ -155,7 +157,6 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
 " GUI Settings {
 if has("gui_running")
     " Basics {
-        colorscheme vividchalk
         set transparency=9
         set lines=200 columns=200
         set guioptions=cer

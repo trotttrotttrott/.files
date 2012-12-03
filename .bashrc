@@ -1,10 +1,16 @@
-export USER='trotttrotttrott'
+export PATH=/usr/local/mysql/bin:$PATH
 
 export PS1='\[\e[1;97m\]trotttrotttrott \[\e[0;97m\]\w $(~/.rvm/bin/rvm-prompt)$(__git_ps1 " (%s)")\n\[\e[0;97m\]▸\[\e[0m\] '
 
 export DYLD_LIBRARY_PATH='/usr/local/mysql/lib/'
 
 export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home/' # jruby gets mad without this :\
+
+export RUBY_HEAP_MIN_SLOTS=1000000
+export RUBY_HEAP_SLOTS_INCREMENT=1000000
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+export RUBY_GC_MALLOC_LIMIT=1000000000
+export RUBY_HEAP_FREE_MIN=500000
 
 # Editor
 export EDITOR=vim
