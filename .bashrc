@@ -1,4 +1,4 @@
-export PATH=/usr/local/mysql/bin:$PATH
+PATH=$PATH:$HOME/.rvm/bin:/usr/local/mysql/bin
 
 export PS1='\[\e[1;97m\]\u \[\e[0;97m\]\w $(~/.rvm/bin/rvm-prompt)$(__git_ps1 " (%s)")\n\[\e[0;97m\]▸\[\e[0m\] '
 
