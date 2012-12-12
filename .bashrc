@@ -1,6 +1,6 @@
 export PATH=/usr/local/mysql/bin:$PATH
 
-export PS1='\[\e[1;97m\]trotttrotttrott \[\e[0;97m\]\w $(~/.rvm/bin/rvm-prompt)$(__git_ps1 " (%s)")\n\[\e[0;97m\]▸\[\e[0m\] '
+export PS1='\[\e[1;97m\]\u \[\e[0;97m\]\w $(~/.rvm/bin/rvm-prompt)$(__git_ps1 " (%s)")\n\[\e[0;97m\]▸\[\e[0m\] '
 
 export DYLD_LIBRARY_PATH='/usr/local/mysql/lib/'
 
@@ -66,6 +66,11 @@ fi
 # ec2
 if [ -f ~/.ec2/env.sh ]; then
   . ~/.ec2/env.sh
+fi
+
+# rackspace
+if [ -f ~/.rackspace/env.sh ]; then
+  . ~/.rackspace/env.sh
 fi
 
 # chef
