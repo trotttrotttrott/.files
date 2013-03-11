@@ -1,8 +1,6 @@
-PATH=$PATH:$HOME/.rvm/bin:/usr/local/mysql/bin
+PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/local/mysql/bin:$HOME/.rbenv/bin
 
-export PS1='\[\e[1;97m\]\u \[\e[0;97m\]\w $(~/.rvm/bin/rvm-prompt)$(__git_ps1 " (%s)")\n\[\e[0;97m\]▸\[\e[0m\] '
-
-export DYLD_LIBRARY_PATH='/usr/local/mysql/lib/'
+export PS1='\[\e[1;97m\]\u \[\e[0;97m\]\w $(rbenv version | sed -e "s/ .*//")$(__git_ps1 " (%s)")\n\[\e[0;97m\]▸\[\e[0m\] '
 
 export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home/' # jruby gets mad without this :\
 
@@ -26,17 +24,19 @@ export HISTIGNORE="&:[bf]g:c:exit"
 export MANPAGER='bash -c "vim -MRn -c \"set ft=man nomod nolist nospell nonu\" \
 -c \"nm q :qa!<CR>\" -c \"nm <end> G\" -c \"nm <home> gg\"</dev/tty <(col -b)"'
 
+# initialize rbenv
+eval "$(rbenv init -)"
+
 if ((${BASH_VERSINFO[0]} >= 4)) && ! shopt globstar >/dev/null; then
   shopt -s globstar # recursive globs fuck yes!
 fi
+
+alias gitk='gitk 2>/dev/null' # osx 10.8 hack to prevent dumb warnings when using gitk
 
 # bash completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
-
-# rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 # hitch
 hitch() {
