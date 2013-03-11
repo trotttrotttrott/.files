@@ -10,20 +10,16 @@ alias screen='screen -U'
 alias retag='ctags --extra=+f -R .'
 alias flushdns='dscacheutil -flushcache'
 
-# rails
-alias rg='script/rails generate'
-alias rs='script/rails server'
-alias rc='script/rails console'
-alias rd='script/rails dbconsole'
-
 # bundler
 alias b='bundle'
 alias bx='bundle exec'
 alias bi='bundle install'
 
-# mysql
-alias start_mysql='sudo /usr/local/mysql/support-files/mysql.server start'
-alias stop_mysql='sudo /usr/local/mysql/support-files/mysql.server stop'
+# rails
+alias rg='bundle exec rails generate'
+alias rs='bundle exec rails server'
+alias rc='bundle exec rails console'
+alias rd='bundle exec rails dbconsole'
 
 # remove .svn files and folders
 alias f_u_svn='find ./ -name ".svn" | xargs rm -Rf'
