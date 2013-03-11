@@ -170,7 +170,7 @@ if has("gui_running")
     "
         let NERDTreeMinimalUI=1
         let NERDTreeShowHidden=1
-        let NERDTreeIgnore=['\.git$', '\.DS_Store$', '\.svn$', '\.bundle$', '\.rspec$']
+        let NERDTreeIgnore=['\.git$', '\.DS_Store$', '\.svn$', '\.bundle$', '\.rspec$', '\.sass-cache$']
     "
     " }
 endif
