@@ -1,4 +1,4 @@
-# cd into matching gem directory
+# cd into current ruby's gem directory
 cdgem() {
   local gempath=$(gem env gemdir)/gems
   if [[ $1 == "" ]]; then
@@ -9,11 +9,6 @@ cdgem() {
   if [[ $gem != "" ]]; then
     cd $gempath/$gem
   fi
-}
-
-_cdgem() {
-  COMPREPLY=($(compgen -W '$(ls `gem env gemdir`/gems)' -- ${COMP_WORDS[COMP_CWORD]}))
-  return 0;
 }
 
 # Encode the string into "%xx"
@@ -30,4 +25,10 @@ urldecode() {
 ackvim() {
   local pattern=$1; shift
   ack -l --print0 "$pattern" "$@" | xargs -0o mvim -o +/"$pattern"
+}
+
+# find and replace regex with ack & perl
+ackandreplace() {
+  local pattern=$1; shift
+  ack -l $pattern | xargs perl -pi -E 's/$pattern/replacement/g'
 }
