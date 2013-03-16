@@ -1,0 +1,23 @@
+# ########################################################################################################################################################################### #
+#
+# scp via gateway:
+#
+# $ scp -Cp -o "ProxyCommand ssh gatewayuser@gateway nc remotehost 22" remoteuser@remotehost:/some/where/file file_copy
+#
+# example:
+# $ scp -Cp -o "ProxyCommand ssh trotttrotttrott@odaacabeef.com nc remotehost 22" trotttrotttrott@radbox01.odaacabeef.com:~/booger.png ~/Desktop/
+#
+# ########################################################################################################################################################################### #
+#
+# list mounted stuff:
+#
+# $ df
+#
+# eject mounted thing:
+#
+# $ hdiutil eject NAMEOFTHING
+#
+# example:
+# $ hdiutil eject /dev/disk4s2
+#
+# ########################################################################################################################################################################### #
