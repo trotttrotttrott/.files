@@ -1,0 +1,6 @@
+.DS_Store
+.vim/after/plugin/eclim.vim
+.vim/backup
+.vim/eclim
+.vim/plugin/eclim.vim
+.vim/tmp
