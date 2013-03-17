@@ -1,0 +1,42 @@
+[user]
+  name = trotttrotttrott
+  email = trott@odaacabeef.com
+
+[core]
+  quotepath = false
+  excludesfile = ~/.gitignore
+  pager = "/usr/bin/less -RciqMSj5"
+  editor = vim
+
+[color]
+  diff = auto
+  branch = auto
+  status = auto
+
+[diff]
+  renames = true
+
+[alias]
+  st = status
+  d = diff
+  ci = commit -v
+  cia = commit -v -a
+  co = checkout
+  cp = cherry-pick
+  l = log
+  lc = log ORIG_HEAD.. --stat --no-merges # list all new commits after you fetched, with stats, but excluding merges
+  ll = log -p
+  lt = log trunk..
+  llt = log -p trunk..
+  lm = log master..
+  llm = log -p master..
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  b = branch
+  undo = reset --hard
+  gitk = !gitk --left-right HEAD...MERGE_HEAD
+  comp = !sh -c 'git log $1..$2 --pretty=oneline' -
+  new = !sh -c 'git log $1@{1}..$1@{0} "$@"' # see what new commits have been created by the last command
+  whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -" # git whois #{name_or_email}
+  whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short # git whatis #{commit_name}
+  ls = ls-files
+  ign = ls-files -o -i --exclude-standard # Show files ignored by git:
