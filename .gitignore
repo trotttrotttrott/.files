@@ -1,4 +1,5 @@
 .DS_Store
+.vim/.netrwhist
 .vim/after/plugin/eclim.vim
 .vim/backup
 .vim/eclim
