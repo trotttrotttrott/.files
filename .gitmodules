@@ -19,9 +19,15 @@
 [submodule ".vim/bundle/vim-rails"]
 	path = .vim/bundle/vim-rails
 	url = git@github.com:tpope/vim-rails.git
-[submodule ".vim/plugin/vim-bufonly"]
-	path = .vim/plugin/vim-bufonly
-	url = git@github.com:duff/vim-bufonly.git
-[submodule ".vim/plugin/ScrollColors"]
-	path = .vim/plugin/ScrollColors
+[submodule ".vim/bundle/ScrollColors"]
+	path = .vim/bundle/ScrollColors
 	url = git@github.com:vim-scripts/ScrollColors.git
+[submodule ".vim/bundle/vim-bufonly"]
+	path = .vim/bundle/vim-bufonly
+	url = git@github.com:duff/vim-bufonly.git
+[submodule ".vim/bundle/ack.vim"]
+	path = .vim/bundle/ack.vim
+	url = git@github.com:mileszs/ack.vim.git
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
+	url = git@github.com:ervandew/supertab.git
