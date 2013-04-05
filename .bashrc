@@ -1,4 +1,4 @@
-PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rbenv/bin
+PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rbenv/bin:/usr/local/share/npm/bin
 
 export PS1='\[\e[1;97m\]\u \[\e[0;97m\]\w $(rbenv version | sed -e "s/ .*//")$(__git_ps1 " (%s)")\n\[\e[0;97m\]▸\[\e[0m\] '
 
