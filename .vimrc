@@ -143,6 +143,7 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
 " }
 
 " NERDTree {
+  let NERDTreeShowLineNumbers=1
   let NERDTreeMinimalUI=1
   let NERDTreeShowHidden=1
   let NERDTreeIgnore=['\.git$', '\.DS_Store$', '\.svn$', '\.bundle$', '\.rspec$', '\.sass-cache$']
