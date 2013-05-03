@@ -1,15 +1,21 @@
-PATH=/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rbenv/bin:/usr/local/share/npm/bin
+# tmux hits /etc/profile a second time when a session starts - farts up $path
+if [ -n $TMUX ] && [ -f /etc/profile ]; then
+  PATH=''
+  source /etc/profile
+fi
+
+PATH=/usr/local/sbin:$PATH
+PATH=/usr/local/bin:$PATH
+PATH=$PATH:$HOME/.rbenv/bin
+PATH=$PATH:/usr/local/share/npm/bin
+
+eval "$(rbenv init -)" # initialize rbenv
 
 export PS1='\[\e[1;97m\]\u \[\e[0;97m\]\w $(rbenv version | sed -e "s/ .*//")$(__git_ps1 " (%s)")\n\[\e[0;97m\]▸\[\e[0m\] '
-
 export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home/' # jruby gets mad without this :\
-
-# Editor
 export EDITOR=vim
 export VISUAL=$EDITOR
-
-# Ignore from history repeat commands, and some other unimportant ones
-export HISTIGNORE="&:[bf]g:c:exit"
+export HISTIGNORE="&:[bf]g:c:exit" # Ignore repeat commands in history
 
 # Use vim to browse man pages. One can use Ctrl-[ and Ctrl-t
 # to browse and return from referenced man pages. ZZ or q to quit.
@@ -17,9 +23,6 @@ export HISTIGNORE="&:[bf]g:c:exit"
 #       word under the cursor by using [section_number]K.
 export MANPAGER='bash -c "vim -MRn -c \"set ft=man nomod nolist nospell nonu\" \
 -c \"nm q :qa!<CR>\" -c \"nm <end> G\" -c \"nm <home> gg\"</dev/tty <(col -b)"'
-
-# initialize rbenv
-eval "$(rbenv init -)"
 
 if ((${BASH_VERSINFO[0]} >= 4)) && ! shopt globstar >/dev/null; then
   shopt -s globstar # recursive globs fuck yes!
