@@ -32,3 +32,10 @@ ackandreplace() {
   local pattern=$1; shift
   ack -l $pattern | xargs perl -pi -E 's/$pattern/replacement/g'
 }
+
+# show 256 terminal colors
+color() {
+  for i in {0..255} ; do
+    printf "\x1b[38;5;${i}mcolour${i}\n"
+  done
+}
