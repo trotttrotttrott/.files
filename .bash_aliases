@@ -21,6 +21,9 @@ alias rs='bundle exec rails server'
 alias rc='bundle exec rails console'
 alias rd='bundle exec rails dbconsole'
 
+# postgres
+alias startpg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+
 # remove .svn files and folders
 alias f_u_svn='find ./ -name ".svn" | xargs rm -Rf'
 
