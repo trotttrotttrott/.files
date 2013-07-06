@@ -151,14 +151,20 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
 
 " GUI Settings {
 if has("gui_running")
+
   " Basics {
     set transparency=9
     set lines=200 columns=200
     set guioptions=cer
-    "        ||
-    "        |+-- use simple dialogs rather than pop-ups
-    "        +  use GUI tabs, not console style tabs
     set mousehide " hide the mouse cursor when typing
+  " }
+
+  " Powerline {
+    so ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/plugin/powerline.vim
+    set guifont=Menlo\ for\ Powerline
+    python from powerline.vim import setup as powerline_setup
+    python powerline_setup()
+    python del powerline_setup
   " }
 endif
 " }
