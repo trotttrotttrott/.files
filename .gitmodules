@@ -37,3 +37,6 @@
 [submodule ".vim/bundle/applescript.vim"]
 	path = .vim/bundle/applescript.vim
 	url = git@github.com:vim-scripts/applescript.vim.git
+[submodule ".vim/bundle/vim-rabl"]
+	path = .vim/bundle/vim-rabl
+	url = git@github.com:yaymukund/vim-rabl.git
