@@ -54,7 +54,6 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
 " }
 
 " Vim UI {
-  set cursorline " highlight current line
   set incsearch " BUT do highlight as you type you
            " search phrase
   set laststatus=2 " always show the status line
@@ -147,13 +146,14 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
   let NERDTreeMinimalUI=1
   let NERDTreeShowHidden=1
   let NERDTreeIgnore=['\.git$', '\.DS_Store$', '\.svn$', '\.bundle$', '\.sass-cache$']
+  let NERDTreeWinSize = 40
 " }
 
 " GUI Settings {
 if has("gui_running")
 
   " Basics {
-    set transparency=9
+    set transparency=15
     set lines=200 columns=200
     set guioptions=cer
     set mousehide " hide the mouse cursor when typing
