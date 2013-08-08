@@ -32,6 +32,7 @@
   llm = log -p master..
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   b = branch
+  t = tag
   undo = reset --hard
   gitk = !gitk --left-right HEAD...MERGE_HEAD
   comp = !sh -c 'git log $1..$2 --pretty=oneline' -
