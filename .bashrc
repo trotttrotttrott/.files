@@ -17,10 +17,7 @@ export EDITOR=vim
 export VISUAL=$EDITOR
 export HISTIGNORE="&:[bf]g:c:exit" # Ignore repeat commands in history
 
-# Use vim to browse man pages. One can use Ctrl-[ and Ctrl-t
-# to browse and return from referenced man pages. ZZ or q to quit.
-# NOTE: initially within vim, one can goto the man page for the
-#       word under the cursor by using [section_number]K.
+# Use vim to browse man pages
 export MANPAGER='bash -c "vim -MRn -c \"set ft=man nomod nolist nospell nonu\" \
 -c \"nm q :qa!<CR>\" -c \"nm <end> G\" -c \"nm <home> gg\"</dev/tty <(col -b)"'
 
