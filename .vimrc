@@ -159,12 +159,5 @@ if has("gui_running")
     set mousehide " hide the mouse cursor when typing
   " }
 
-  " Powerline {
-    so ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/plugin/powerline.vim
-    set guifont=Menlo\ for\ Powerline
-    python from powerline.vim import setup as powerline_setup
-    python powerline_setup()
-    python del powerline_setup
-  " }
 endif
 " }
