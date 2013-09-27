@@ -40,3 +40,6 @@
 [submodule ".vim/bundle/vim-rabl"]
 	path = .vim/bundle/vim-rabl
 	url = git@github.com:yaymukund/vim-rabl.git
+[submodule ".vim/bundle/handlebars"]
+	path = .vim/bundle/handlebars
+	url = git://github.com/nono/vim-handlebars.git
