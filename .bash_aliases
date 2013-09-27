@@ -35,3 +35,6 @@ alias killds='find . -name ".DS_Store" -type f -delete'
 
 # get external ip
 alias get_external_ip="curl -L -s --max-time 10 http://checkip.dyndns.org | egrep -o -m 1 '([[:digit:]]{1,3}\.){3}[[:digit:]]{1,3}'"
+
+# pbcopy from tmux buffer
+alias t2pb='tmux show-buffer | pbcopy'
