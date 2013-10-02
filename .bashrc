@@ -58,16 +58,16 @@ if [ -f ~/.bash_projects ]; then
 fi
 
 # ec2
-if [ -f ~/.ec2/env.sh ]; then
-  . ~/.ec2/env.sh
+if [ -f ~/.ec2/.env ]; then
+  . ~/.ec2/.env
 fi
 
 # rackspace
-if [ -f ~/.rackspace/env.sh ]; then
-  . ~/.rackspace/env.sh
+if [ -f ~/.rackspace/.env ]; then
+  . ~/.rackspace/.env
 fi
 
 # chef
-if [ -f ~/.chef/env.sh ]; then
-  . ~/.chef/env.sh
+if [ -f ~/.chef/.env ]; then
+  . ~/.chef/.env
 fi
