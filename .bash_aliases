@@ -38,3 +38,6 @@ alias get_external_ip="curl -L -s --max-time 10 http://checkip.dyndns.org | egre
 
 # pbcopy from tmux buffer
 alias t2pb='tmux show-buffer | pbcopy'
+
+# open something with Quick Look
+alias qlf='qlmanage -p "$@"'
