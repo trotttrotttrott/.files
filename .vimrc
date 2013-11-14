@@ -123,7 +123,7 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
 " Mappings {
   map <F12> ggVGg?
 
-    " NERDTree
+  " NERDTree
     map <c-n> :NERDTreeToggle<CR>
 
   " Split navigation ctrl-[hjkl]
@@ -134,8 +134,12 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
 " }
 
 " Autocommands {
-  " Stuff
-    au BufWritePre * :%s/\s\+$//e " Remove trailing whitespace before saving
+
+  " Remove trailing whitespace before saving
+    au BufWritePre * :%s/\s\+$//e
+
+  " Close vim if all that's left is nerdtree
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " }
 
 " NERDTree {
