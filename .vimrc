@@ -123,11 +123,8 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
 " Mappings {
   map <F12> ggVGg?
 
-  " Make arrow keys do buffer stuff
-    map <down> :bn<RETURN>
-    map <left> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
-    map <right> :BufOnly<RETURN>
-    map <up> :bp<RETURN>
+    " NERDTree
+    map <c-n> :NERDTreeToggle<CR>
 
   " Split navigation ctrl-[hjkl]
     nmap <silent> <c-k> :wincmd k<CR>
