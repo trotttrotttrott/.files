@@ -54,17 +54,13 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
 " }
 
 " Vim UI {
-  set incsearch " BUT do highlight as you type you
-           " search phrase
+  set incsearch " BUT do highlight as you type you search phrase
   set laststatus=2 " always show the status line
   set lazyredraw " do not redraw while running macros
-  set linespace=0 " don't insert any extra pixel lines
-           " betweens rows
-  set list " we do what to show tabs, to ensure we get them
-        " out of my files
+  set linespace=0 " don't insert any extra pixel lines betweens rows
+  set list " we do what to show tabs, to ensure we get them out of my files
   set listchars=tab:>-,trail:- " show tabs and trailing
-  set matchtime=5 " how many tenths of a second to blink
-           " matching brackets for
+  set matchtime=5 " how many tenths of a second to blink matching brackets for
   set nohlsearch " do not highlight searched for phrases
   set nostartofline " leave my cursor where it was
   set novisualbell " don't blink
@@ -72,8 +68,7 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
   set numberwidth=5 " We are good up to 99999 lines
   set report=0 " tell us when anything is changed via :...
   set ruler " Always show current positions along the bottom
-  set shortmess=aOstT " shortens messages to avoid
-             " 'press a key' prompt
+  set shortmess=aOstT " shortens messages to avoid 'press a key' prompt
   set showcmd " show the command being typed
   set showmatch " show matching brackets
   set sidescrolloff=10 " Keep 5 lines at the size
@@ -109,15 +104,8 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
 " }
 
 " Folding {
-  set foldenable " Turn on folding
-  set foldmarker={,} " Fold C style code (only use this as default if you use a high foldlevel)
-  set foldmethod=marker " Fold on the marker
-  set foldlevel=100 " Don't autofold anything (but I can still fold manually)
-  set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds
-  function SimpleFoldText()
-    return getline(v:foldstart).' '
-  endfunction
-  set foldtext=SimpleFoldText() " Custom fold text function
+  set foldenable
+  set foldmethod=manual
 " }
 
 " Mappings {
@@ -152,13 +140,11 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
 
 " GUI Settings {
 if has("gui_running")
-
   " Basics {
     set transparency=15
     set lines=200 columns=200
     set guioptions=cer
     set mousehide " hide the mouse cursor when typing
   " }
-
 endif
 " }
