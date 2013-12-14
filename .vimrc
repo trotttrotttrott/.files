@@ -111,6 +111,10 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
 " Mappings {
   map <F12> ggVGg?
 
+  " Copy buffer path/filename
+    nmap ,cs :let @*=expand("%")<CR>
+    nmap ,cl :let @*=expand("%:p")<CR>
+
   " NERDTree
     map <c-n> :NERDTreeToggle<CR>
 
@@ -142,7 +146,7 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
 if has("gui_running")
   " Basics {
     set transparency=15
-    set lines=200 columns=200
+    set lines=999 columns=999
     set guioptions=cer
     set mousehide " hide the mouse cursor when typing
   " }
