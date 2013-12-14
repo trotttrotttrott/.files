@@ -4,7 +4,7 @@
 --follow
 --group
 --smart-case
---type-add=ruby=.haml,.erb,.rake,.scss,.sass,.feature,.js,.coffee
+--type-add=ruby=.haml,.erb,.rake,.scss,.sass,.feature,.js,.coffee,.emblem
 
 --type-set=DUMB=.git
 --noDUMB
