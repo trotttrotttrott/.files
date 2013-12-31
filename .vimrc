@@ -25,10 +25,11 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
   "             |+-- :write updates alternative file name
   "             +-- :read updates alternative file name
   syntax on " syntax highlighting on
+  filetype plugin indent on " load filetype plugins/indent settings
+  au BufNewFile,BufRead *.slim set filetype=slim
 " }
 
 " General {
-  filetype plugin indent on " load filetype plugins/indent settings
   set autochdir " always switch to the current file directory
   set backspace=indent,eol,start " make backspace a more flexible
   set backup " make backup files
