@@ -5,3 +5,6 @@
 .vim/eclim
 .vim/plugin/eclim.vim
 .vim/tmp
+.mutt/accounts/*
+.mutt/cache/*
+.mutt/certificates
