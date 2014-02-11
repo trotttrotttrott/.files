@@ -17,30 +17,19 @@ export EDITOR=vim
 export VISUAL=$EDITOR
 export HISTIGNORE="&:[bf]g:c:exit" # Ignore repeat commands in history
 
-# Use vim to browse man pages
+# Use vim instead of less to browse man pages
 export MANPAGER='bash -c "vim -MRn -c \"set ft=man nomod nolist nospell nonu\" \
 -c \"nm q :qa!<CR>\" -c \"nm <end> G\" -c \"nm <home> gg\"</dev/tty <(col -b)"'
 
-if ((${BASH_VERSINFO[0]} >= 4)) && ! shopt globstar >/dev/null; then
-  shopt -s globstar # recursive globs fuck yes!
+# recursive globbing
+if ((${BASH_VERSINFO[0]} >= 4)) && ! shopt globstar > /dev/null; then
+  shopt -s globstar
 fi
-
-alias gitk='gitk 2>/dev/null' # osx 10.8 hack to prevent dumb warnings when using gitk
 
 # bash completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
-
-# hitch
-hitch() {
-  command hitch "$@"
-  if [[ -s "$HOME/.hitch_export_authors" ]]; then
-    source "$HOME/.hitch_export_authors"
-  fi
-}
-
-alias unhitch='hitch -u'
 
 # aliases
 if [ -f ~/.bash_aliases ]; then
@@ -52,9 +41,9 @@ if [ -f ~/.bash_functions ]; then
   . ~/.bash_functions
 fi
 
-# projects
-if [ -f ~/.bash_projects ]; then
-  . ~/.bash_projects
+# private or doesn't belong in scm
+if [ -f ~/.bash_private ]; then
+  . ~/.bash_private
 fi
 
 # ec2
