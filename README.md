@@ -2,30 +2,43 @@
 
 The dot files of El Señor Christopher Douglas Trott
 
-**Setup**
+**Notes**
 
-1. Clone to `~/.files`.
-1. Create symlinks to the stuff you want in your home directory.
-1. If you symlink `.vimrc`, create these directories: `.vim/backup`, `.vim/tmp`.
-1. Install `bash-completion` with homebrew as the PS1 declaration in `.bashrc` expects it.
-1. Install `the_silver_searcher` with homebrew as ag.vim expects it.
-1. Optionally create the following files and `.bashrc` will pick them up:
-  * `~/.bash_projects`: for project specific aliases, functions, etc.
-  * `~/.ec2/.env`: ec2 config.
-  * `~/.rackspace/.env`: rackspace config.
-  * `~/.chef/.env`: chef config.
+Create these directories:
 
----
----
+* `.vim/backup`
+* `.vim/tmp`
 
-**Brews**
+Package dependencies:
 
-* `bash-completion`
-* `git`
-* `imagemagick`
-* `macvim`
-* `reattach-to-user-namespace`
-* `the_silver_searcher`
-* `tmux`
-* `tree`
-* `vim`
+* `brew install bash-completion` - PS1
+* `brew install the_silver_searcher` - ag.vim
+
+Use homebrew installed `bash`:
+
+* `brew install bash`
+* Add `/usr/local/bin/bash` to `/etc/shells`
+* `chsh -s /usr/local/bin/bash`
+
+tmux:
+
+* `brew install tmux`
+* `brew install reattach-to-user-namespace`
+
+Use mutt email client:
+
+* `brew install mutt`
+* `brew install urlview`
+
+```muttrc
+# ~/.mutt/accounts/your@email.com
+
+set imap_user = "[your email]"
+set smtp_url = "smtp://[your email]@smtp.gmail.com:587/"
+set from = "[whatever]"
+set realname = "[whatever]"
+
+source "~/.mutt/muttrc"
+```
+
+`mutt -F ~/.mutt/your@email.com`
