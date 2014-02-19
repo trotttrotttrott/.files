@@ -17,6 +17,11 @@ export EDITOR=vim
 export VISUAL=$EDITOR
 export HISTIGNORE="&:[bf]g:c:exit" # Ignore repeat commands in history
 
+# pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+# cache pip-installed packages to avoid re-downloading
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
 # Use vim instead of less to browse man pages
 export MANPAGER='bash -c "vim -MRn -c \"set ft=man nomod nolist nospell nonu\" \
 -c \"nm q :qa!<CR>\" -c \"nm <end> G\" -c \"nm <home> gg\"</dev/tty <(col -b)"'

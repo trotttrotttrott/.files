@@ -13,6 +13,11 @@ cdgem() {
   fi
 }
 
+# install global python packages with pip
+syspip(){
+   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+
 # Encode the string into "%xx"
 urlencode() {
   ruby -e 'puts ARGV[0].split(/%/).map{|c|"%c"%c.to_i(16)} * ""' "$1"
