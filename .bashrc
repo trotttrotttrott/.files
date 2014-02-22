@@ -4,6 +4,9 @@ if [ -n $TMUX ] && [ -f /etc/profile ]; then
   source /etc/profile
 fi
 
+# use vi mode
+set -o vi
+
 PATH=/usr/local/sbin:$PATH
 PATH=/usr/local/bin:$PATH
 PATH=$PATH:$HOME/.rbenv/bin
