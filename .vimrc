@@ -27,6 +27,7 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
   syntax on " syntax highlighting on
   filetype plugin indent on " load filetype plugins/indent settings
   au BufNewFile,BufRead *.slim set filetype=slim
+  au BufNewFile,BufRead *.mote set filetype=mote
 " }
 
 " General {
