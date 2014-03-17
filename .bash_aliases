@@ -7,22 +7,15 @@ alias c='clear'
 alias g='git'
 alias gs='git status'
 alias gl='git log'
-alias gt='git tag'
 alias ..='cd ..'
-alias screen='screen -U'
-alias retag='ctags --extra=+f -R .'
 alias flushdns='dscacheutil -flushcache'
 
 # bundler
-alias b='bundle'
 alias bx='bundle exec'
-alias bi='bundle install'
 
 # rails
-alias rg='bundle exec rails generate'
 alias rs='bundle exec rails server'
 alias rc='bundle exec rails console'
-alias rd='bundle exec rails dbconsole'
 
 # postgres
 alias startpg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
