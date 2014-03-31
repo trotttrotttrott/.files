@@ -26,8 +26,6 @@ export EDITOR=vim
 export VISUAL=$EDITOR
 export HISTIGNORE="&:[bf]g:c:exit" # Ignore repeat commands in history
 
-# pip should only run if there is a virtualenv currently activated
-export PIP_REQUIRE_VIRTUALENV=true
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
