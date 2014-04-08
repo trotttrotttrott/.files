@@ -7,7 +7,6 @@ alias c='clear'
 alias g='git'
 alias gs='git status'
 alias gl='git log'
-alias ..='cd ..'
 alias flushdns='dscacheutil -flushcache'
 
 # bundler
