@@ -20,7 +20,7 @@ __gs() {
   [[ -z $GS_NAME ]] || echo -e " \e[1;35m$GS_NAME\e[0;97m"
 }
 
-export PS1='\[\e[1;97m\]\u \[\e[0;97m\]\w $(__rbenv)$(__gs) $(chefvm current)$(__git_ps1 " (%s)")\n▸\[\e[0m\] '
+export PS1='\[\e[1;97m\]\u \[\e[0;97m\]\w $(__rbenv)$(__gs) $(chefvm current)$(__git_ps1 " (%s)")\n▸\e[0m\] '
 export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home/' # jruby gets mad without this :\
 export EDITOR=vim
 export VISUAL=$EDITOR
