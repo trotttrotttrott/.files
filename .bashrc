@@ -13,8 +13,7 @@ eval "$(rbenv init -)" # initialize rbenv
 
 eval "$($HOME/.chefvm/bin/chefvm init -)" # initialize chefvm
 
-export PS1='\[\033[1;97m\u \[\033[0;97m\w $(rbenv version | sed -e "s/ .*//") $(chefvm current)$(__git_ps1 " (%s)")
-▸\[\033[00m\] '
+export PS1='\w $(rbenv version | sed -e "s/ .*//") $(chefvm current)$(__git_ps1 " (%s)")\n▸ '
 
 export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home/' # jruby gets mad without this :\
 export EDITOR=vim
