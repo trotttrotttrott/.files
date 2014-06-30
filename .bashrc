@@ -7,15 +7,17 @@ fi
 PATH=/usr/local/sbin:$PATH
 PATH=/usr/local/bin:$PATH
 PATH=$PATH:$HOME/.rbenv/bin
-PATH=$PATH:/usr/local/share/npm/bin
+
+# fancy things
+PATH=$PATH:$HOME/code/tools/bin
 
 eval "$(rbenv init -)" # initialize rbenv
 
 eval "$($HOME/.chefvm/bin/chefvm init -)" # initialize chefvm
 
-export PS1='\w $(rbenv version | sed -e "s/ .*//") $(chefvm current)$(__git_ps1 " (%s)")\n▸ '
+export PS1='\[\e[;97m\]\w $(rbenv version | sed -e "s/ .*//") $(chefvm current)$(__git_ps1 " (%s)")\n▸ \[\e[m\]'
 
-export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home/' # jruby gets mad without this :\
+export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home' # jruby gets mad without this :\
 export EDITOR=vim
 export VISUAL=$EDITOR
 export HISTIGNORE="&:[bf]g:c:exit" # Ignore repeat commands in history
@@ -50,19 +52,4 @@ fi
 # private or doesn't belong in scm
 if [ -f ~/.bash_private ]; then
   . ~/.bash_private
-fi
-
-# ec2
-if [ -f ~/.ec2/.env ]; then
-  . ~/.ec2/.env
-fi
-
-# rackspace
-if [ -f ~/.rackspace/.env ]; then
-  . ~/.rackspace/.env
-fi
-
-# chef
-if [ -f ~/.chef/.env ]; then
-  . ~/.chef/.env
 fi

@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 # cd into current ruby's gem directory
 cdgem() {
@@ -15,7 +15,7 @@ cdgem() {
 
 # install global python packages with pip
 syspip(){
-   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+  PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
 
 # Encode the string into "%xx"
@@ -28,16 +28,9 @@ urldecode() {
   ruby -r cgi -e 'puts CGI.unescape ARGV[0]' "$1"
 }
 
-# open mvim for ack search results
-ackvim() {
-  local pattern=$1; shift
-  ack -l --print0 "$pattern" "$@" | xargs -0o mvim -o +/"$pattern"
-}
-
 # find and replace regex with ack & perl
-ackandreplace() {
-  local pattern=$1; shift
-  ack -l $pattern | xargs perl -pi -E 's/$pattern/replacement/g'
+agandreplace() {
+  ag -l $1 $3 | xargs perl -pi -E "s/$1/$2/g"
 }
 
 # show 256 terminal colo(u)rs

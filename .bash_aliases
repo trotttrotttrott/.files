@@ -18,6 +18,7 @@ alias rc='bundle exec rails console'
 
 # postgres
 alias startpg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias stoppg='pg_ctl -D /usr/local/var/postgres stop'
 
 # kill .svn files
 alias killsvn='find . -name ".svn" | xargs rm -Rf'
@@ -33,3 +34,6 @@ alias t2pb='tmux show-buffer | pbcopy'
 
 # open something with Quick Look
 alias qlf='qlmanage -p "$@"'
+
+# serve current directory
+alias servedir='ruby -run -e httpd . -p 9090'
