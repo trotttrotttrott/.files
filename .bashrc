@@ -29,6 +29,9 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 export MANPAGER='bash -c "vim -MRn -c \"set ft=man nomod nolist nospell nonu\" \
 -c \"nm q :qa!<CR>\" -c \"nm <end> G\" -c \"nm <home> gg\"</dev/tty <(col -b)"'
 
+# ec2 api cli
+export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.13.0/libexec"
+
 # recursive globbing
 if ((${BASH_VERSINFO[0]} >= 4)) && ! shopt globstar > /dev/null; then
   shopt -s globstar
