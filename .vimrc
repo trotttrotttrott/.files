@@ -1,7 +1,8 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
+
 call pathogen#infect()
 
-let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
+let $JS_CMD="node" " lintjs doesn't like Lion's js interpreter.
 
 " Basics {
   colorscheme vividchalk
@@ -142,15 +143,4 @@ let $JS_CMD='node' " lintjs doesn't like Lion's js interpreter.
   let NERDTreeShowHidden=1
   let NERDTreeIgnore=['\.git$', '\.DS_Store$', '\.svn$', '\.bundle$', '\.sass-cache$']
   let NERDTreeWinSize = 40
-" }
-
-" GUI Settings {
-if has("gui_running")
-  " Basics {
-    set transparency=15
-    set lines=999 columns=999
-    set guioptions=cer
-    set mousehide " hide the mouse cursor when typing
-  " }
-endif
 " }
