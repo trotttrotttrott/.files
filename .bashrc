@@ -12,9 +12,6 @@ PATH=/usr/local/opt/go/libexec/bin:$PATH
 PATH=$GOPATH/bin:$PATH
 PATH=$PATH:$HOME/.rbenv/bin
 
-# fancy things
-PATH=$PATH:$HOME/code/tools/bin
-
 eval "$(rbenv init -)" # initialize rbenv
 
 eval "$($HOME/.chefvm/bin/chefvm init -)" # initialize chefvm
