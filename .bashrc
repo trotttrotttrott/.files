@@ -18,9 +18,11 @@ eval "$($HOME/.chefvm/bin/chefvm init -)" # initialize chefvm
 
 export PS1='\[\e[;97m\]\w $(rbenv version | sed -e "s/ .*//") $(chefvm current)$(__git_ps1 " (%s)")\n▸ \[\e[m\]'
 
-export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home' # jruby gets mad without this :\
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home'
+
 export EDITOR=vim
 export VISUAL=$EDITOR
+
 export HISTIGNORE="&:[bf]g:c:exit" # Ignore repeat commands in history
 
 # cache pip-installed packages to avoid re-downloading
