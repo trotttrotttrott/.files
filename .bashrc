@@ -59,3 +59,8 @@ fi
 if [ -f ~/.bash_private ]; then
   . ~/.bash_private
 fi
+
+# nova completion
+if [ -f ~/.bash_nova_completion ]; then
+  . ~/.bash_nova_completion
+fi
