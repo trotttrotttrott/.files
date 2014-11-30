@@ -4,8 +4,12 @@ if [ -n $TMUX ] && [ -f /etc/profile ]; then
   source /etc/profile
 fi
 
+export GOPATH=$HOME/code/gocode
+
 PATH=/usr/local/sbin:$PATH
 PATH=/usr/local/bin:$PATH
+PATH=/usr/local/opt/go/libexec/bin:$PATH
+PATH=$GOPATH/bin:$PATH
 PATH=$PATH:$HOME/.rbenv/bin
 
 # fancy things
