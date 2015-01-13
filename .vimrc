@@ -94,7 +94,6 @@ let $JS_CMD="node" " lintjs doesn't like Lion's js interpreter.
 
 " Text Formatting/Layout {
   set completeopt= " don't use a pop up menu for completions
-  set expandtab " no real tabs please!
   set formatoptions=rq " Automatically insert comment leader on return, and let gq format comments
   set ignorecase " case insensitive by default
   set infercase " case inferred by default
@@ -104,6 +103,8 @@ let $JS_CMD="node" " lintjs doesn't like Lion's js interpreter.
   set shiftwidth=2
   set softtabstop=2
   set tabstop=2
+  set expandtab " use soft tabs by default
+  autocmd FileType go setlocal noexpandtab " use real tabs for go
 " }
 
 " Folding {
