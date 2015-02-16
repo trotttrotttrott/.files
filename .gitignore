@@ -1,10 +1,7 @@
 .DS_Store
-.vim/.netrwhist
-.vim/after/plugin/eclim.vim
-.vim/backup
-.vim/eclim
-.vim/plugin/eclim.vim
-.vim/tmp
-.mutt/accounts/*
-.mutt/cache/*
-.mutt/certificates
+
+.vim/backup/*
+!.vim/backup/.keep
+
+.vim/tmp/*
+!.vim/tmp/.keep

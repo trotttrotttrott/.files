@@ -4,11 +4,6 @@ The dot files of El Señor Christopher Douglas Trott
 
 **Notes**
 
-Create these directories:
-
-* `.vim/backup`
-* `.vim/tmp`
-
 Package dependencies:
 
 * `brew install bash-completion` - PS1
