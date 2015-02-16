@@ -24,21 +24,3 @@ tmux:
 
 * `brew install tmux`
 * `brew install reattach-to-user-namespace`
-
-Use mutt email client:
-
-* `brew install mutt`
-* `brew install urlview`
-
-```muttrc
-# ~/.mutt/accounts/your@email.com
-
-set imap_user = "[your email]"
-set smtp_url = "smtp://[your email]@smtp.gmail.com:587/"
-set from = "[whatever]"
-set realname = "[whatever]"
-
-source "~/.mutt/muttrc"
-```
-
-`mutt -F ~/.mutt/your@email.com`
