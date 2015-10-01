@@ -29,6 +29,10 @@ let $JS_CMD="node" " lintjs doesn't like Lion's js interpreter.
   filetype plugin indent on " load filetype plugins/indent settings
   au BufNewFile,BufRead *.slim set ft=slim
   au BufNewFile,BufRead *.mote set ft=html
+  augroup vagrant
+    au!
+    au BufRead,BufNewFile Vagrantfile set filetype=ruby
+  augroup END
 " }
 
 " General {
