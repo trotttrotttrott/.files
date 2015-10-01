@@ -39,3 +39,8 @@ colour() {
     printf "\x1b[38;5;${i}mcolour${i}\n"
   done
 }
+
+# scp via gateway
+scpvg() {
+  scp -Cp -o "ProxyCommand ssh -A $1 nc $2 22" $3 $4
+}
