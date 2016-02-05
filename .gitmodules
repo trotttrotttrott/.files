@@ -73,3 +73,6 @@
 [submodule ".vim/bundle/vim-terraform.git"]
 	path = .vim/bundle/vim-terraform.git
 	url = git@github.com:markcornick/vim-terraform.git
+[submodule ".vim/bundle/vim-jsx"]
+	path = .vim/bundle/vim-jsx
+	url = git@github.com:mxw/vim-jsx.git
