@@ -12,7 +12,8 @@ PATH=/usr/local/opt/go/libexec/bin:$PATH
 PATH=$GOPATH/bin:$PATH
 PATH=$PATH:$HOME/.rbenv/bin
 PATH=$PATH:/usr/local/packer/0.8.6
-PATH=$PATH:/usr/local/terraform/0.6.3
+PATH=$PATH:/usr/local/terraform/0.6.11
+PATH=$PATH:/usr/local/vault/0.4.0
 
 eval "$(rbenv init -)" # initialize rbenv
 
@@ -21,6 +22,8 @@ eval "$($HOME/.chefvm/bin/chefvm init -)" # initialize chefvm
 export PS1='\[\e[;97m\]\w $(rbenv version | sed -e "s/ .*//") $(chefvm current)$(__git_ps1 " (%s)")\n▸ \[\e[m\]'
 
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home'
+
+export VAULT_ADDR='http://127.0.0.1:8200'
 
 export EDITOR=vim
 export VISUAL=$EDITOR
@@ -65,4 +68,19 @@ fi
 # nova completion
 if [ -f ~/.bash_nova_completion ]; then
   . ~/.bash_nova_completion
+fi
+
+# neutron completion
+if [ -f ~/.bash_neutron_completion ]; then
+  . ~/.bash_neutron_completion
+fi
+
+# cinder completion
+if [ -f ~/.bash_cinder_completion ]; then
+  . ~/.bash_cinder_completion
+fi
+
+# glance completion
+if [ -f ~/.bash_glance_completion ]; then
+  . ~/.bash_glance_completion
 fi

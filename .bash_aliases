@@ -4,9 +4,16 @@
 alias ll='ls -la -h'
 alias ls='ls -G'
 alias c='clear'
+
+# git
 alias g='git'
 alias gs='git status'
 alias gl='git log'
+
+# terraform
+alias tp='terraform plan -module-depth=-1'
+
+# dns
 alias flushdns='dscacheutil -flushcache'
 
 # bundler
@@ -34,6 +41,3 @@ alias t2pb='tmux show-buffer | pbcopy'
 
 # open something with Quick Look
 alias qlf='qlmanage -p "$@"'
-
-# serve current directory
-alias servedir='ruby -run -e httpd . -p 9090'

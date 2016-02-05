@@ -41,6 +41,18 @@ colour() {
 }
 
 # scp via gateway
+# $1: gateway, $2: remote host, $3, $4: locations
 scpvg() {
   scp -Cp -o "ProxyCommand ssh -A $1 nc $2 22" $3 $4
+}
+
+# Remove all global npm modules
+flushnpm() {
+  npm -g ls | grep -v 'npm@' | awk '/@/ {print $2}' | awk -F@ '{print $1}' | xargs npm -g rm
+}
+
+# serve current directory
+servedir() {
+  sleep 1 && chrome-cli open "localhost:9090" -n &
+  ruby -run -e httpd . -p 9090
 }
