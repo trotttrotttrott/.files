@@ -12,7 +12,7 @@ PATH=/usr/local/opt/go/libexec/bin:$PATH
 PATH=$GOPATH/bin:$PATH
 PATH=$PATH:$HOME/.rbenv/bin
 PATH=$PATH:/usr/local/packer/0.8.6
-PATH=$PATH:/usr/local/terraform/0.6.11
+PATH=$PATH:/usr/local/terraform/0.6.10
 PATH=$PATH:/usr/local/vault/0.4.0
 
 eval "$(rbenv init -)" # initialize rbenv
