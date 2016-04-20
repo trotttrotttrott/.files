@@ -4,99 +4,25 @@ call pathogen#infect()
 
 let $JS_CMD="node" " lintjs doesn't like Lion's js interpreter.
 
-" Basics {
-  colorscheme vividchalk
-  set nocompatible " explicitly get out of vi-compatible mode
-  set noexrc " don't use local version of .(g)vimrc, .exrc
-  set background=dark " we plan to use a dark background
-  set cpoptions=aABceFsmq
-  "             |||||||||
-  "             ||||||||+-- When joining lines, leave the cursor
-  "             |||||||    between joined lines
-  "             |||||||+-- When a new match is created (showmatch)
-  "             ||||||    pause for .5
-  "             ||||||+-- Set buffer options when entering the
-  "             |||||    buffer
-  "             |||||+-- :write command updates current file name
-  "             ||||+-- Automatically add <CR> to the last line
-  "             |||    when using :@r
-  "             |||+-- Searching continues at the end of the match
-  "             ||    at the cursor position
-  "             ||+-- A backslash has no special meaning in mappings
-  "             |+-- :write updates alternative file name
-  "             +-- :read updates alternative file name
-  syntax on " syntax highlighting on
-  filetype plugin indent on " load filetype plugins/indent settings
-  augroup vagrant
-    au!
-    au BufRead,BufNewFile Vagrantfile set filetype=ruby
-  augroup END
-" }
+colorscheme vividchalk
+syntax on
+filetype plugin indent on
 
 " General {
-  set autochdir " always switch to the current file directory
-  set backspace=indent,eol,start " make backspace a more flexible
   set backup " make backup files
   set backupdir=~/.vim/backup " where to put backup files
   set directory=~/.vim/tmp " directory to place swap files in
   set clipboard=unnamed " share clipboard
-  set fileformats=unix,dos,mac " support all three, in this order
   set hidden " you can change buffers without saving
+  set nocompatible " explicitly get out of vi-compatible mode
   set noerrorbells " don't make noise
-  set whichwrap=b,s,h,l,<,>,~,[,] " everything wraps
-  "             | | | | | | | | |
-  "             | | | | | | | | +-- "]" Insert and Replace
-  "             | | | | | | | +-- "[" Insert and Replace
-  "             | | | | | | +-- "~" Normal
-  "             | | | | | +-- <Right> Normal and Visual
-  "             | | | | +-- <Left> Normal and Visual
-  "             | | | +-- "l" Normal and Visual (not recommended)
-  "             | | +-- "h" Normal and Visual (not recommended)
-  "             | +-- <Space> Normal and Visual
-  "             +-- <BS> Normal and Visual
-  set wildmenu " turn on command line completion wild style
-  set wildmode=list:longest " turn on wild mode huge list
-" }
-
-" Vim UI {
-  set incsearch " BUT do highlight as you type you search phrase
-  set laststatus=2 " always show the status line
-  set lazyredraw " do not redraw while running macros
-  set linespace=0 " don't insert any extra pixel lines betweens rows
-  set list " we do what to show tabs, to ensure we get them out of my files
-  set listchars=tab:>-,trail:- " show tabs and trailing
-  set matchtime=5 " how many tenths of a second to blink matching brackets for
-  set nohlsearch " do not highlight searched for phrases
-  set nostartofline " leave my cursor where it was
-  set novisualbell " don't blink
-  set number " turn on line numbers
-  set numberwidth=5 " We are good up to 99999 lines
-  set report=0 " tell us when anything is changed via :...
-  set ruler " Always show current positions along the bottom
-  set shortmess=aOstT " shortens messages to avoid 'press a key' prompt
-  set showcmd " show the command being typed
-  set showmatch " show matching brackets
-  set sidescrolloff=10 " Keep 5 lines at the size
-  set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
-  "              | | | | |  |   |    |  |   |  |
-  "              | | | | |  |   |    |  |   |  + current
-  "              | | | | |  |   |    |  |   |     column
-  "              | | | | |  |   |    |  |   +-- current line
-  "              | | | | |  |   |    |  +-- current % into file
-  "              | | | | |  |   |    +-- current syntax in
-  "              | | | | |  |   |      square brackets
-  "              | | | | |  |   +-- current fileformat
-  "              | | | | |  +-- number of lines
-  "              | | | | +-- preview flag in square brackets
-  "              | | | +-- help flag in square brackets
-  "              | | +-- readonly flag in square brackets
-  "              | +-- rodified flag in square brackets
-  "              +-- full path to file in the buffer
+  set noexrc " don't use local version of .(g)vimrc, .exrc
+  set number
+  set ruler
 " }
 
 " Text Formatting/Layout {
   set completeopt= " don't use a pop up menu for completions
-  set formatoptions=rq " Automatically insert comment leader on return, and let gq format comments
   set ignorecase " case insensitive by default
   set infercase " case inferred by default
   set nowrap " do not wrap line
@@ -106,7 +32,6 @@ let $JS_CMD="node" " lintjs doesn't like Lion's js interpreter.
   set softtabstop=2
   set tabstop=2
   set expandtab " use soft tabs by default
-  autocmd FileType go setlocal noexpandtab " use real tabs for go
 " }
 
 " Folding {
@@ -115,11 +40,6 @@ let $JS_CMD="node" " lintjs doesn't like Lion's js interpreter.
 " }
 
 " Mappings {
-  map <F12> ggVGg?
-
-  " Copy buffer path/filename
-    nmap ,cs :let @*=expand("%")<CR>
-    nmap ,cl :let @*=expand("%:p")<CR>
 
   " NERDTree
     map <c-n> :NERDTreeToggle<CR>
@@ -138,6 +58,9 @@ let $JS_CMD="node" " lintjs doesn't like Lion's js interpreter.
 
   " Close vim if all that's left is nerdtree
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+  " use real tabs with go
+    autocmd FileType go setlocal noexpandtab
 " }
 
 " NERDTree {
