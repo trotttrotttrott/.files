@@ -7,7 +7,6 @@ The dot files of El Señor Christopher Douglas Trott
 Package dependencies:
 
 * `brew install bash-completion` - PS1
-* `brew install the_silver_searcher` - ag.vim
 
 Use homebrew installed `bash`:
 
