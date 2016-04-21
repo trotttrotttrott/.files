@@ -10,10 +10,14 @@ filetype plugin indent on
 
 " General {
   set backup " make backup files
+  set backspace=indent,eol,start " make backspace a more flexible
   set backupdir=~/.vim/backup " where to put backup files
   set directory=~/.vim/tmp " directory to place swap files in
   set clipboard=unnamed " share clipboard
   set hidden " you can change buffers without saving
+  set incsearch " highlight as you type you search phrase
+  set laststatus=2 " always show statusline
+  set listchars=tab:>-,trail:- " show tabs and trailing spaces
   set nocompatible " explicitly get out of vi-compatible mode
   set noerrorbells " don't make noise
   set noexrc " don't use local version of .(g)vimrc, .exrc
