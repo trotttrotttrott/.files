@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/vim-surround"]
 	path = .vim/bundle/vim-surround
 	url = git@github.com:tpope/vim-surround.git
+[submodule ".vim/bundle/vim-hashicorp-tools"]
+	path = .vim/bundle/vim-hashicorp-tools
+	url = git@github.com:hashivim/vim-hashicorp-tools.git
