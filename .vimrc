@@ -17,7 +17,8 @@ filetype plugin indent on
   set hidden " you can change buffers without saving
   set incsearch " highlight as you type you search phrase
   set laststatus=2 " always show statusline
-  set listchars=tab:>-,trail:- " show tabs and trailing spaces
+  set list " show whitespace
+  set listchars=tab:>-,trail:- " characters to represent whitespace
   set nocompatible " explicitly get out of vi-compatible mode
   set noerrorbells " don't make noise
   set noexrc " don't use local version of .(g)vimrc, .exrc
