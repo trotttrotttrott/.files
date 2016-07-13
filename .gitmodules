@@ -28,3 +28,6 @@
 [submodule ".vim/bundle/vim-bats"]
 	path = .vim/bundle/vim-bats
 	url = git@github.com:vim-scripts/bats.vim.git
+[submodule ".vim/bundle/vim-go"]
+	path = .vim/bundle/vim-go
+	url = git@github.com:fatih/vim-go.git
