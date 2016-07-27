@@ -10,6 +10,9 @@ alias g='git'
 alias gs='git status'
 alias gl='git log'
 
+# docker
+alias rmidang='docker rmi $(docker images --quiet --filter "dangling=true")'
+
 # terraform
 alias tp='terraform plan -module-depth=-1'
 
