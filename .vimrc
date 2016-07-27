@@ -22,6 +22,7 @@ filetype plugin indent on
   set nocompatible " explicitly get out of vi-compatible mode
   set noerrorbells " don't make noise
   set noexrc " don't use local version of .(g)vimrc, .exrc
+  set nomodeline " ignore modeline settings in files
   set number
   set ruler
 " }
