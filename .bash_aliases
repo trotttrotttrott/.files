@@ -14,7 +14,7 @@ alias gl='git log'
 alias rmidang='docker rmi $(docker images --quiet --filter "dangling=true")'
 
 # terraform
-alias tp='terraform plan -module-depth=-1'
+alias tp='terraform plan'
 
 # dns
 alias flushdns='dscacheutil -flushcache'
