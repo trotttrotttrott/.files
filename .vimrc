@@ -12,6 +12,7 @@ filetype plugin indent on
   set backup " make backup files
   set backspace=indent,eol,start " make backspace a more flexible
   set backupdir=~/.vim/backup " where to put backup files
+  set backupskip=/tmp/*,/private/tmp/*
   set directory=~/.vim/tmp " directory to place swap files in
   set clipboard=unnamed " share clipboard
   set hidden " you can change buffers without saving
