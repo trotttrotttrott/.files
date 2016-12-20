@@ -3,7 +3,7 @@ if [ -n $TMUX ]; then
   source /etc/profile
 fi
 
-GOPATH=$HOME/code/gopath
+export GOPATH=$HOME/code/gopath
 
 PATH=/usr/local/sbin:$PATH
 PATH=/usr/local/bin:$PATH
@@ -18,21 +18,21 @@ PATH=$PATH:/usr/local/vault/0.4.0
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 
-PS1='\[\e[;97m\]\w $(rbenv version | sed -e "s/ .*//") ${M2X_TENANT:-.}$(__docker_machine_ps1)$(__git_ps1 " (%s)")\n▸ \[\e[m\]'
+PS1='\[\e[;97m\]\w $(rbenv version | sed -e "s/ .*//") ${M2X_TENANT:-.}$(__git_ps1 " (%s)")\n▸ \[\e[m\]'
 
-JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home'
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home'
 
-EC2_HOME='/usr/local/Cellar/ec2-api-tools/1.6.13.0/libexec'
+export EC2_HOME='/usr/local/Cellar/ec2-api-tools/1.6.13.0/libexec'
 
-VAULT_ADDR='http://127.0.0.1:8200'
+export VAULT_ADDR='http://127.0.0.1:8200'
 
-EDITOR=vim
-VISUAL=$EDITOR
+export EDITOR=vim
+export VISUAL=$EDITOR
 
-HISTIGNORE='&:[bf]g:c:exit' # Ignore repeat commands in history
+export HISTIGNORE='&:[bf]g:c:exit' # Ignore repeat commands in history
 
 # Use vim instead of less to browse man pages
-MANPAGER='bash -c "vim -MRn -c \"set ft=man nomod nolist nospell nonu\" \
+export MANPAGER='bash -c "vim -MRn -c \"set ft=man nomod nolist nospell nonu\" \
 -c \"nm q :qa!<CR>\" -c \"nm <end> G\" -c \"nm <home> gg\"</dev/tty <(col -b)"'
 
 # recursive globbing
