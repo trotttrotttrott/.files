@@ -18,6 +18,9 @@ PATH=$PATH:/usr/local/vault/0.4.0
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
 PS1='\[\e[;97m\]\w $(rbenv version | sed -e "s/ .*//") ${M2X_TENANT:-.}$(__git_ps1 " (%s)")\n▸ \[\e[m\]'
 
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home'
