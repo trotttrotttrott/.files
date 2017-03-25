@@ -11,7 +11,7 @@ PATH=/usr/local/opt/go/libexec/bin:$PATH
 PATH=$GOPATH/bin:$PATH
 PATH=$PATH:$HOME/.rbenv/bin
 PATH=$PATH:$HOME/.pyenv/bin
-PATH=$PATH:/usr/local/packer/0.10.1
+PATH=$PATH:/usr/local/packer/current
 PATH=$PATH:/usr/local/terraform/current
 PATH=$PATH:/usr/local/vault/0.4.0
 
