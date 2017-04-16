@@ -2,6 +2,9 @@
 
 .vim/backup/*
 !.vim/backup/.keep
-
 .vim/tmp/*
 !.vim/tmp/.keep
+
+.tool-versions
+
+.gs

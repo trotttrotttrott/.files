@@ -16,7 +16,7 @@
 
 [core]
   editor = vim
-  excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore_global
   pager = "/usr/bin/less -RciqMSj5"
   quotepath = false
 
