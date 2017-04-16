@@ -5,11 +5,6 @@ alias ll='ls -la -h'
 alias ls='ls -G'
 alias c='clear'
 
-# git
-alias g='git'
-alias gs='git status'
-alias gl='git log'
-
 # docker
 alias rmidang='docker rmi $(docker images --quiet --filter "dangling=true")'
 
@@ -18,13 +13,6 @@ alias tp='terraform plan'
 
 # dns
 alias flushdns='dscacheutil -flushcache'
-
-# bundler
-alias bx='bundle exec'
-
-# rails
-alias rs='bundle exec rails server'
-alias rc='bundle exec rails console'
 
 # postgres
 alias startpg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
