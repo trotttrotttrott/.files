@@ -1,30 +1,32 @@
-[user]
-  name = trotttrotttrott
-  email = trott@odaacabeef.com
-
-[core]
-  quotepath = false
-  excludesfile = ~/.gitignore
-  pager = "/usr/bin/less -RciqMSj5"
-  editor = vim
+[alias]
+  b = branch
+  ci = commit -v
+  co = checkout
+  l = log
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  ll = log -p
+  ign = ls-files -o -i --exclude-standard # Show files ignored by git:
+  st = status
+  t = tag
 
 [color]
-  diff = auto
   branch = auto
+  diff = auto
   status = auto
+
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+  pager = "/usr/bin/less -RciqMSj5"
+  quotepath = false
 
 [diff]
   renames = true
 
-[alias]
-  b = branch
-  t = tag
-  st = status
-  ci = commit -v
-  co = checkout
-  l = log
-  ll = log -p
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  ign = ls-files -o -i --exclude-standard # Show files ignored by git:
 [heroku]
   account = personal
+
+[user]
+  name = trotttrotttrott
+  email = trott@odaacabeef.com
+
