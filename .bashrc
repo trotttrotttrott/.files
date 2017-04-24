@@ -2,7 +2,7 @@
 . $HOME/.asdf/completions/asdf.bash
 . /usr/local/etc/bash_completion
 
-PS1='\[\e[;97m\]\w $(asdf current ruby | sed -e "s/ .*//") $([[ -v GS_NAME ]] && echo "+ ")${M2X_TENANT:-.}$(__git_ps1 " (%s)")\n▸ \[\e[m\]'
+PS1='\[\e[;97m\]\w $(asdf current ruby | sed -e "s/ .*//")$([[ -v GS_NAME ]] && echo ".gs") ${M2X_TENANT:-.}$(__git_ps1 " (%s)")\n▸ \[\e[m\]'
 
 export EDITOR=vim
 export VISUAL=$EDITOR
