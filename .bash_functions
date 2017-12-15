@@ -20,7 +20,7 @@ syspip(){
 
 # Encode the string into "%xx"
 urlencode() {
-  ruby -e 'puts ARGV[0].split(/%/).map{|c|"%c"%c.to_i(16)} * ""' "$1"
+  ruby -r cgi -e 'puts CGI.escape ARGV[0]' "$1"
 }
 
 # Decode a urlencoded string ("%xx")
@@ -55,4 +55,9 @@ flushnpm() {
 servedir() {
   sleep 1 && chrome-cli open "localhost:9090" -n &
   ruby -run -e httpd . -p 9090
+}
+
+# output TLS cert info
+certinfo() {
+  openssl x509 -in $1 -noout -text
 }

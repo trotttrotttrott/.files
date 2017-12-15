@@ -1,13 +1,19 @@
+export PATH=/usr/local/sbin:$PATH
+
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 . /usr/local/etc/bash_completion
+. /usr/local/lib/azure-cli/az.completion
 
-PS1='\[\e[;97m\]\w $(asdf current ruby | sed -e "s/ .*//")$([[ -v GS_NAME ]] && echo ".gs") ${M2X_TENANT:-.}$(__git_ps1 " (%s)")\n▸ \[\e[m\]'
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH=$(go env GOPATH)
 
 export EDITOR=vim
 export VISUAL=$EDITOR
 
-export HISTIGNORE='&:[bf]g:c:exit' # Ignore repeat commands in history
+export HISTIGNORE='&:[bf]g:c:exit'
+
+PS1='\[\e[;97m\]\w $(asdf current ruby | sed -e "s/ .*//")$([[ -v GS_NAME ]] && echo ".gs") ${M2X_TENANT:-.}$(__git_ps1 " (%s)")\n▸ \[\e[m\]'
 
 if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
 if [ -f ~/.bash_functions ]; then . ~/.bash_functions; fi
