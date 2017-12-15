@@ -37,3 +37,9 @@
 [submodule ".vim/bundle/vim-elm"]
 	path = .vim/bundle/vim-elm
 	url = git@github.com:lambdatoast/elm.vim.git
+[submodule ".vim/bundle/vim-plantuml"]
+	path = .vim/bundle/vim-plantuml
+	url = git@github.com:aklt/plantuml-syntax.git
+[submodule ".vim/bundle/vim-slumlord"]
+	path = .vim/bundle/vim-slumlord
+	url = git@github.com:scrooloose/vim-slumlord.git
