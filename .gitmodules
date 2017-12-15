@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/vim-slumlord"]
 	path = .vim/bundle/vim-slumlord
 	url = git@github.com:scrooloose/vim-slumlord.git
+[submodule ".vim/bundle/vim-boxdraw"]
+	path = .vim/bundle/vim-boxdraw
+	url = git@github.com:gyim/vim-boxdraw.git
