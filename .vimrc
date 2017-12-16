@@ -26,6 +26,7 @@ filetype plugin indent on
   set nomodeline " ignore modeline settings in files
   set number
   set ruler
+  set virtualedit=all " cursor can select empty cells
 " }
 
 " Text Formatting/Layout {
