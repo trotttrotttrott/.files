@@ -5,9 +5,6 @@ export PATH=/usr/local/sbin:$PATH
 . /usr/local/etc/bash_completion
 . /usr/local/lib/azure-cli/az.completion
 
-export PATH=$PATH:$(go env GOPATH)/bin
-export GOPATH=$(go env GOPATH)
-
 export EDITOR=vim
 export VISUAL=$EDITOR
 
