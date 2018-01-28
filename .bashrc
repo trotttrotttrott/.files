@@ -10,7 +10,16 @@ export VISUAL=$EDITOR
 
 export HISTIGNORE='&:[bf]g:c:exit'
 
-PS1='\[\e[;97m\]\w $(asdf current ruby | sed -e "s/ .*//")$([[ -v GS_NAME ]] && echo ".gs") ${SPECIAL_CONTEXT:-.}$(__git_ps1 " (%s)")\n▸ \[\e[m\]'
+current() {
+  asdf current $1 | sed -e "s/ .*//"
+}
+
+PS1='\[\e[;97m\]\w'
+PS1=$PS1'$([ -v GS_NAME ] && echo " $(current ruby).gs")'
+PS1=$PS1'$([ -v GO_PATH ] && echo " $(current go)")'
+PS1=$PS1' ${SPECIAL_CONTEXT:-.}'
+PS1=$PS1'$(__git_ps1)'
+PS1=$PS1'\n▸ \[\e[m\]'
 
 if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
 if [ -f ~/.bash_functions ]; then . ~/.bash_functions; fi
