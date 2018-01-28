@@ -13,7 +13,7 @@ export VISUAL=$EDITOR
 
 export HISTIGNORE='&:[bf]g:c:exit'
 
-PS1='\[\e[;97m\]\w $(asdf current ruby | sed -e "s/ .*//")$([[ -v GS_NAME ]] && echo ".gs") ${M2X_TENANT:-.}$(__git_ps1 " (%s)")\n▸ \[\e[m\]'
+PS1='\[\e[;97m\]\w $(asdf current ruby | sed -e "s/ .*//")$([[ -v GS_NAME ]] && echo ".gs") ${SPECIAL_CONTEXT:-.}$(__git_ps1 " (%s)")\n▸ \[\e[m\]'
 
 if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
 if [ -f ~/.bash_functions ]; then . ~/.bash_functions; fi
