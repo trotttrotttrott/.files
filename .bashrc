@@ -24,8 +24,3 @@ PS1=$PS1'\n▸ \[\e[m\]'
 if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
 if [ -f ~/.bash_functions ]; then . ~/.bash_functions; fi
 if [ -f ~/.bash_private ]; then . ~/.bash_private; fi
-
-if [ -f ~/.bash_nova_completion ]; then . ~/.bash_nova_completion; fi
-if [ -f ~/.bash_neutron_completion ]; then . ~/.bash_neutron_completion; fi
-if [ -f ~/.bash_cinder_completion ]; then . ~/.bash_cinder_completion; fi
-if [ -f ~/.bash_glance_completion ]; then . ~/.bash_glance_completion; fi
