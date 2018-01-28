@@ -24,7 +24,7 @@ filetype plugin indent on
   set noerrorbells " don't make noise
   set noexrc " don't use local version of .(g)vimrc, .exrc
   set nomodeline " ignore modeline settings in files
-  set number
+  set number relativenumber " show numbers relative to position
   set ruler
   set virtualedit=all " cursor can select empty cells
 " }
@@ -40,6 +40,14 @@ filetype plugin indent on
   set softtabstop=2
   set tabstop=2
   set expandtab " use soft tabs by default
+" }
+"
+" Relative Number {
+  augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+  augroup END
 " }
 
 " Folding {
