@@ -83,6 +83,6 @@ filetype plugin indent on
   let NERDTreeShowLineNumbers=1
   let NERDTreeMinimalUI=1
   let NERDTreeShowHidden=1
-  let NERDTreeIgnore=['\.git$', '\.DS_Store$', '\.svn$', '\.bundle$', '\.sass-cache$']
+  let NERDTreeIgnore=['\.git$', '\.DS_Store$', '\.svn$', '\.bundle$', '\.sass-cache$', 'node_modules$']
   let NERDTreeWinSize = 40
 " }
