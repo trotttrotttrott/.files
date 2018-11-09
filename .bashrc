@@ -1,9 +1,16 @@
 export PATH=/usr/local/sbin:$PATH
 
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-. /usr/local/etc/bash_completion
-. /usr/local/lib/azure-cli/az.completion
+for path in \
+  $HOME/.asdf/asdf.sh \
+  $HOME/.asdf/completions/asdf.bash \
+  /usr/local/etc/bash_completion \
+  /usr/local/lib/azure-cli/az.completion \
+  $HOME/.bash_aliases \
+  $HOME/.bash_functions \
+  $HOME/.bash_private \
+  ; do
+  if [ -f $path ]; then . $path; fi
+done
 
 export EDITOR=vim
 export VISUAL=$EDITOR
@@ -20,7 +27,3 @@ PS1=$PS1'$([ -v GOPATH ] && echo " $(current golang)")'
 PS1=$PS1' ${SPECIAL_CONTEXT:-.}'
 PS1=$PS1'$(__git_ps1)'
 PS1=$PS1'\n▸ \[\e[m\]'
-
-if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
-if [ -f ~/.bash_functions ]; then . ~/.bash_functions; fi
-if [ -f ~/.bash_private ]; then . ~/.bash_private; fi
