@@ -30,3 +30,5 @@
   name = trotttrotttrott
   email = trott@odaacabeef.com
 
+[pager]
+  branch = false
