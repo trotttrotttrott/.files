@@ -46,3 +46,6 @@
 [submodule ".vim/bundle/vim-boxdraw"]
 	path = .vim/bundle/vim-boxdraw
 	url = git@github.com:gyim/vim-boxdraw.git
+[submodule ".vim/bundle/vim-jsonnet"]
+	path = .vim/bundle/vim-jsonnet
+	url = git@github.com:google/vim-jsonnet.git
