@@ -46,3 +46,6 @@
 [submodule ".vim/bundle/vim-jsonnet"]
 	path = .vim/bundle/vim-jsonnet
 	url = git@github.com:google/vim-jsonnet.git
+[submodule ".vim/bundle/vim-terraform"]
+	path = .vim/bundle/vim-terraform
+	url = git@github.com:hashivim/vim-terraform.git
