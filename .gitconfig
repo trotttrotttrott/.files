@@ -32,3 +32,5 @@
 
 [pager]
   branch = false
+  stash = false
+  tag = false
