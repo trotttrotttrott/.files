@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/vim-terraform"]
 	path = .vim/bundle/vim-terraform
 	url = git@github.com:hashivim/vim-terraform.git
+[submodule ".vim/bundle/vim-mote"]
+	path = .vim/bundle/vim-mote
+	url = git@github.com:rodrim3n/vim-mote.git
