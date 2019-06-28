@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Don't switch workspaces when cmd-tab'ing applications.
+defaults write com.apple.dock workspaces-auto-swoosh -bool NO
+
+killall Dock
