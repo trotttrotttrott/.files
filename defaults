@@ -2,5 +2,11 @@
 
 # Don't switch workspaces when cmd-tab'ing applications.
 defaults write com.apple.dock workspaces-auto-swoosh -bool NO
-
 killall Dock
+
+# Turn off Zoom video when joining a meeting.
+defaults write ~/Library/Preferences/us.zoom.config.plist ZDisableVideo 1
+sudo defaults write /Library/Preferences/us.zoom.config.plist ZDisableVideo 1
+# Kill local zoom server and prevent relaunch.
+pkill "ZoomOpener"; rm -rf ~/.zoomus; touch ~/.zoomus && chmod 000 ~/.zoomus;
+pkill "RingCentralOpener";  rm -rf ~/.ringcentralopener; touch ~/.ringcentralopener && chmod 000 ~/.ringcentralopener;
