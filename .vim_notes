@@ -4,24 +4,62 @@
 #
 # ctl+w...
 #
-# o: only
-# |: max h
-# _: max v
+# o only
+# | max h
+# _ max v
 #
 # ########################################################################################################################################################################### #
 #
-# Boxdraw
+# Boxdraw - https://github.com/gyim/vim-boxdraw
 #
 # +...
 #
-# o: empty box
-# O: box with label
+# o empty box
+# O box with label
 #
-# |: end w/ v line, no arr
-# -: end w/ h line, no arr
-# v: end w/ v line, arr
-# >: end w/ h line, arr
+# | end w/ v line, no arr
+# - end w/ h line, no arr
+# v end w/ v line, arr
+# > end w/ h line, arr
 #
 # ++...double arrs
+#
+# ########################################################################################################################################################################### #
+#
+# Folding - http://vimdoc.sourceforge.net/htmldoc/fold.html
+#
+# z...
+#
+# # foldmethod=manual
+#
+# f#j creates a fold from the cursor down # lines.
+# f/string creates a fold from the cursor to string.
+#
+# d deletes the fold at the cursor.
+# E deletes all folds.
+#
+# Manual folding can be tedious.
+#
+# # foldmethod=indent (fold where indentations occur - real useful for configuration files)
+#
+# m increases the foldlevel by one.
+# M closes all open folds.
+#
+# r decreases the foldlevel by one.
+# R decreases the foldlevel to zero -- all folds will be open.
+#
+# o opens a fold at the cursor.
+# O opens all folds at the cursor.
+#
+# c close a fold at cursor.
+# C close all folds under cursor recursively.
+#
+# j moves the cursor to the next fold.
+# k moves the cursor to the previous fold.
+#
+# These are not prepended by 'z'...
+#
+# [z move to start of open fold.
+# ]z move to end of open fold.
 #
 # ########################################################################################################################################################################### #
