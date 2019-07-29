@@ -77,6 +77,9 @@ filetype plugin indent on
 
   " use real tabs with go
     autocmd FileType go setlocal noexpandtab
+
+  " markdown files use html comments
+    autocmd FileType markdown setlocal commentstring=<!--\ %s\ -->
 " }
 
 " NERDTree {
