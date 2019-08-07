@@ -1,6 +1,6 @@
 export PATH=/usr/local/sbin:$PATH
 
-for path in \
+for script in \
   $HOME/.asdf/asdf.sh \
   $HOME/.asdf/completions/asdf.bash \
   /usr/local/etc/bash_completion \
@@ -9,7 +9,7 @@ for path in \
   $HOME/.bash_functions \
   $HOME/.bash_private \
   ; do
-  if [ -f $path ]; then . $path; fi
+  if [ -f $script ]; then . $script; fi
 done
 
 export EDITOR=vim
