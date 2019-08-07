@@ -8,6 +8,7 @@ for script in \
   $HOME/.bash_aliases \
   $HOME/.bash_functions \
   $HOME/.bash_private \
+  $HOME/.bash_k8s \
   ; do
   if [ -f $script ]; then . $script; fi
 done
