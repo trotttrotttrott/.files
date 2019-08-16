@@ -14,10 +14,6 @@ alias tp='terraform plan'
 # dns
 alias flushdns='dscacheutil -flushcache'
 
-# postgres
-alias startpg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias stoppg='pg_ctl -D /usr/local/var/postgres stop'
-
 # kill .svn files
 alias killsvn='find . -name ".svn" | xargs rm -Rf'
 
