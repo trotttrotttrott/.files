@@ -8,6 +8,7 @@
   ign = ls-files -o -i --exclude-standard # Show files ignored by git:
   st = status
   t = tag
+  rps = rev-parse --short HEAD
 
 [color]
   branch = auto
