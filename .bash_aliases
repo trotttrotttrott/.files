@@ -27,3 +27,14 @@ alias t2pb='tmux show-buffer | pbcopy'
 
 # open something with Quick Look
 alias qlf='qlmanage -p "$@"'
+
+# k8s
+alias k='kubectl'
+alias kgcm='kubectl get cm'
+alias kgdep='kubectl get deploy'
+alias kgsts='kubectl get sts'
+alias kgsvc='kubectl get svc'
+alias kgpo='kubectl get po -o wide'
+alias kdpo='kubectl describe po "$@"'
+alias kl='kubectl logs --tail=100  -f "$@"'
+alias knetshoot='kubectl run --generator=run-pod/v1 tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash'
