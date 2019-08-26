@@ -14,11 +14,10 @@ alias tp='terraform plan'
 # dns
 alias flushdns='dscacheutil -flushcache'
 
-# kill .svn files
-alias killsvn='find . -name ".svn" | xargs rm -Rf'
-
-# kill .DS_Store files (they're annoying)
-alias killds='find . -name ".DS_Store" -type f -delete'
+# kill stuff
+alias killsvn='find . -name ".svn" | xargs rm -Rf' # :(
+alias killterraform='find . -name ".terraform" | xargs rm -Rf' # nested module directories are big
+alias killds='find . -name ".DS_Store" -type f -delete' # annoying, don't need em
 
 # get external ip
 alias get_external_ip="curl -L -s --max-time 10 http://checkip.dyndns.org | egrep -o -m 1 '([[:digit:]]{1,3}\.){3}[[:digit:]]{1,3}'"
