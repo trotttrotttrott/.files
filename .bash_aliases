@@ -18,6 +18,8 @@ alias flushdns='dscacheutil -flushcache'
 alias killsvn='find . -name ".svn" | xargs rm -Rf'
 alias killgit='find . -name ".git" | xargs rm -Rf'
 alias killterraform='find . -name ".terraform" | xargs rm -Rf'
+alias killnodemodules='find . -name "node_modules" | xargs rm -Rf'
+alias killgs='find . -name ".gs" | xargs rm -Rf'
 alias killds='find . -name ".DS_Store" -type f -delete'
 
 # get external ip
