@@ -15,9 +15,10 @@ alias tp='terraform plan'
 alias flushdns='dscacheutil -flushcache'
 
 # kill stuff
-alias killsvn='find . -name ".svn" | xargs rm -Rf' # :(
-alias killterraform='find . -name ".terraform" | xargs rm -Rf' # nested module directories are big
-alias killds='find . -name ".DS_Store" -type f -delete' # annoying, don't need em
+alias killsvn='find . -name ".svn" | xargs rm -Rf'
+alias killgit='find . -name ".git" | xargs rm -Rf'
+alias killterraform='find . -name ".terraform" | xargs rm -Rf'
+alias killds='find . -name ".DS_Store" -type f -delete'
 
 # get external ip
 alias get_external_ip="curl -L -s --max-time 10 http://checkip.dyndns.org | egrep -o -m 1 '([[:digit:]]{1,3}\.){3}[[:digit:]]{1,3}'"
@@ -32,6 +33,7 @@ alias qlf='qlmanage -p "$@"'
 alias k='kubectl'
 alias kgcm='kubectl get cm'
 alias kgdep='kubectl get deploy'
+alias kgev='kubectl get ev'
 alias kgsts='kubectl get sts'
 alias kgsvc='kubectl get svc'
 alias kgpo='kubectl get po -o wide'
