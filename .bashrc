@@ -4,11 +4,10 @@ for script in \
   $HOME/.asdf/asdf.sh \
   $HOME/.asdf/completions/asdf.bash \
   /usr/local/etc/bash_completion \
-  /usr/local/lib/azure-cli/az.completion \
+  $HOME/.bash_k8s \
   $HOME/.bash_aliases \
   $HOME/.bash_functions \
   $HOME/.bash_private \
-  $HOME/.bash_k8s \
   ; do
   if [ -f $script ]; then . $script; fi
 done
