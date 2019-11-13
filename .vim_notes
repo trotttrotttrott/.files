@@ -32,8 +32,9 @@
 #
 # # foldmethod=manual
 #
-# f#j creates a fold from the cursor down # lines.
-# f/string creates a fold from the cursor to string.
+# fG fold from cursor to bottom of file.
+# f#j fold from cursor down # lines.
+# f/string fold from the cursor to match.
 #
 # d deletes the fold at the cursor.
 # E deletes all folds.
