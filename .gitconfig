@@ -18,7 +18,6 @@
 [core]
   editor = vim
   excludesfile = ~/.gitignore_global
-  pager = "/usr/bin/less -RciqMSj5"
   quotepath = false
 
 [diff]
@@ -30,8 +29,3 @@
 [user]
   name = trotttrotttrott
   email = trott@odaacabeef.com
-
-[pager]
-  branch = false
-  stash = false
-  tag = false
