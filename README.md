@@ -4,8 +4,25 @@ The dot files of El Señor Christopher Douglas Trott.
 
 ## Submodules
 
+Initialize after cloning:
+
 ```
 git submodule update --init --recursive
+```
+
+Update:
+
+```
+cd ...
+git co master
+git pull origin master
+cd ../... && git ci ...
+```
+
+Add new:
+
+```
+git submodule add git@... path/to/put/submodule
 ```
 
 ## [Homebrew](https://brew.sh/)
