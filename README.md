@@ -46,4 +46,13 @@ done
 
 ## [Asdf](https://github.com/asdf-vm/asdf)
 
-[.bashrc](.bashrc) expects `asdf` to be present along with the Ruby and Go [plugins](https://github.com/asdf-vm/asdf-plugins).
+```bash
+for plugin in \
+  'golang https://github.com/kennyp/asdf-golang.git' \
+  'kubectl https://github.com/Banno/asdf-kubectl.git' \
+  'ruby https://github.com/asdf-vm/asdf-ruby.git' \
+  'tanka https://github.com/trotttrotttrott/asdf-tanka.git' \
+  'terraform https://github.com/Banno/asdf-hashicorp.git'; do
+    asdf plugin-add $plugin
+done
+```
