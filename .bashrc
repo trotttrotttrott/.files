@@ -1,4 +1,4 @@
-export PATH=/usr/local/sbin:$PATH
+export PATH=$HOME/.krew/bin:$PATH
 
 for script in \
   $HOME/.asdf/asdf.sh \
