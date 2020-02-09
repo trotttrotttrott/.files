@@ -61,3 +61,17 @@ servedir() {
 certinfo() {
   openssl x509 -in $1 -noout -text
 }
+
+# reset wifi networks and prefs.
+reset-wifi-prefs() {
+  cfgdir=/Library/Preferences/SystemConfiguration
+  bkdir=~/Desktop/sys-config-bu
+  mkdir -p $bkdir
+  for f in NetworkInterfaces.plist com.apple.airport.preferences.plist preferences.plist; do
+    sudo mv $cfgdir/$f $bkdir
+  done
+  cat <<EOF
+Network preference files moved to $bkdir. You can delete them.
+Restart to complete the reset.
+EOF
+}
