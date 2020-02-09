@@ -34,10 +34,13 @@ chsh -s /usr/local/bin/bash
 ```
 
 ```
-brew install bash-completion
-brew install git
-brew install vim
-brew install tmux
+for formula in \
+  bash-completion \
+  git \
+  vim \
+  tmux; do
+    brew install $formula
+done
 ```
 
 ## [Asdf](https://github.com/asdf-vm/asdf)
