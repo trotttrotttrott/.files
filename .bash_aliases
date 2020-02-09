@@ -33,15 +33,23 @@ alias qlf='qlmanage -p "$@"'
 
 # k8s
 alias k='kubectl'
-alias kgcm='kubectl get cm'
-alias kgdep='kubectl get deploy'
-alias kgev='kubectl get ev'
-alias kgnode='kubectl get nodes'
-alias kgrs='kubectl get rs'
-alias kgsts='kubectl get sts'
-alias kgsvc='kubectl get svc'
-alias kgpo='kubectl get po -o wide'
+
+alias kg='kubectl get "$@"'
+alias kgcj='kubectl get cj'           # cronjobs
+alias kgcm='kubectl get cm'           # configmaps
+alias kgdep='kubectl get deploy'      # deployments
+alias kgev='kubectl get ev'           # events
+alias kgno='kubectl get no'           # nodes
+alias kgrs='kubectl get rs'           # replicasets
+alias kgsecrets='kubectl get secrets' # secrets
+alias kgsts='kubectl get sts'         # statefulsets
+alias kgsvc='kubectl get svc'         # services
+alias kgpo='kubectl get po -o wide'   # pods
+
+alias kd='kubectl describe "$@"'
 alias kdpo='kubectl describe po "$@"'
-alias kdnode='kubectl describe node "$@"'
+alias kdno='kubectl describe no "$@"'
+
 alias kl='kubectl logs --tail=100  -f "$@"'
+
 alias knetshoot='kubectl run --generator=run-pod/v1 tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash'
