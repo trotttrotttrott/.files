@@ -11,6 +11,9 @@ alias rmidang='docker rmi $(docker images --quiet --filter "dangling=true")'
 # terraform
 alias tp='terraform plan'
 
+# gitk
+alias gitk='TK_SILENCE_DEPRECATION=1 gitk "$@" > /dev/null 2>&1'
+
 # dns
 alias flushdns='dscacheutil -flushcache'
 
