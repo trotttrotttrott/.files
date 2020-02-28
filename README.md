@@ -56,3 +56,7 @@ for plugin in \
     asdf plugin-add $plugin
 done
 ```
+
+## [vim-go](https://github.com/fatih/vim-go)
+
+This is installed as a submodule, but you need to run `:GoInstallBinaries` in Vim to get its dependencies. This doesn't work right with Asdf because go-vim will find asdf shims for its dependencies and wrongly consider them installed. At the time of writing this, updating [this line](https://github.com/fatih/vim-go/blob/be888d7761a2e6948a220623bf75962bd189bad4/plugin/go.vim#L150) will disregard the shims and install the binaries.
