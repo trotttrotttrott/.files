@@ -16,7 +16,7 @@
   status = auto
 
 [core]
-  editor = vim
+  editor = nvim
   excludesfile = ~/.gitignore_global
   quotepath = false
 

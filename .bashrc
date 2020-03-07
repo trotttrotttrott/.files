@@ -12,7 +12,7 @@ for script in \
   if [ -f $script ]; then . $script; fi
 done
 
-export EDITOR=vim
+export EDITOR=nvim
 export VISUAL=$EDITOR
 
 current() {
