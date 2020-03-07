@@ -15,8 +15,6 @@ done
 export EDITOR=vim
 export VISUAL=$EDITOR
 
-export HISTIGNORE='&:[bf]g:c:exit'
-
 current() {
   asdf current $1 | sed -e "s/ .*//"
 }
