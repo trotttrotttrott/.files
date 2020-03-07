@@ -75,3 +75,16 @@ Network preference files moved to $bkdir. You can delete them.
 Restart to complete the reset.
 EOF
 }
+
+check-cli-tools() {
+  echo
+  for cmd in \
+    'xcode-select -p' \
+    'gcc -v' \
+    'llvm-gcc -v' \
+    'clang -v'; do
+    echo "\$ ${cmd}"
+    eval $cmd
+    echo
+  done
+}
