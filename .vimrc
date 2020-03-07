@@ -1,9 +1,3 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-
-call pathogen#infect()
-
-let $JS_CMD="node" " lintjs doesn't like Lion's js interpreter.
-
 colorscheme vividchalk
 syntax on
 filetype plugin indent on
