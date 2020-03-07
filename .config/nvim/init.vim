@@ -4,6 +4,7 @@ source ~/.vimrc
 
 call plug#begin(stdpath('data') . '/plugged')
 
+Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'duff/vim-bufonly', { 'on': 'BufOnly' }
 Plug 'tpope/vim-commentary'
@@ -24,3 +25,12 @@ call plug#end()
 let g:deoplete#enable_at_startup = 1
 
 call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+
+map <c-n> :NERDTreeToggle<CR>
+let NERDTreeShowLineNumbers=1
+let NERDTreeMinimalUI=1
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.git$', '\.DS_Store$', '\.svn$', '\.bundle$', '\.sass-cache$', 'node_modules$']
+let NERDTreeWinSize = 40
+" Close vim if all that's left is nerdtree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
