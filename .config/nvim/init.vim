@@ -26,6 +26,8 @@ call plug#end()
 " deoplete
 let g:deoplete#enable_at_startup = 1
 call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+autocmd FileType * if &filetype != "go"
+  \ | call deoplete#custom#buffer_option('auto_complete', v:false)
 
 " nerdtree
 map <c-n> :NERDTreeToggle<CR>
