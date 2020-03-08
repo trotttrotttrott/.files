@@ -1,6 +1,7 @@
 #! /bin/bash
 
 # general
+alias v='nvim'
 alias ll='ls -la -h'
 alias ls='ls -G'
 alias c='clear'
