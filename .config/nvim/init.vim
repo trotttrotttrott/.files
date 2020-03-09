@@ -9,6 +9,8 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'duff/vim-bufonly', { 'on': 'BufOnly' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-markdown'
 Plug 'gyim/vim-boxdraw'
