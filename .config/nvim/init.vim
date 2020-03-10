@@ -42,4 +42,5 @@ let NERDTreeWinSize = 40
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " goyo
-let g:goyo_width = '75%'
+let g:goyo_width = '60%'
+let g:goyo_linenr = 1
