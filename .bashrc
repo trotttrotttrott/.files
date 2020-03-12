@@ -1,4 +1,7 @@
-export PATH=$HOME/.krew/bin:$PATH
+if [ -n $TMUX ]; then
+  PATH=''
+  source /etc/profile
+fi
 
 for script in \
   $HOME/.asdf/asdf.sh \
@@ -11,6 +14,9 @@ for script in \
   ; do
   if [ -f $script ]; then . $script; fi
 done
+
+export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/.krew/bin
 
 export EDITOR=nvim
 export VISUAL=$EDITOR
