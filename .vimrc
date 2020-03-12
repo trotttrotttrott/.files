@@ -1,9 +1,8 @@
 colorscheme vividchalk
 
 " General {
-  set backup " make backup files
-  set backupdir=~/.vim/backup " where to put backup files
-  set backupskip=/tmp/*,/private/tmp/*
+  set nobackup
+  set nowritebackup
   set directory=~/.vim/tmp " directory to place swap files in
   set clipboard=unnamed " share clipboard
   set hidden " you can change buffers without saving
