@@ -40,3 +40,5 @@ let g:goyo_linenr = 1
 
 " coc
 source ~/.config/nvim/coc.vim
+" only use autocomplete on go files.
+autocmd FileType * if &filetype != "go" | let b:coc_suggest_disable = 1 | endif
