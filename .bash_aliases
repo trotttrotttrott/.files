@@ -25,6 +25,7 @@ alias killterraform='find . -name ".terraform" | xargs rm -Rf'
 alias killnodemodules='find . -name "node_modules" | xargs rm -Rf'
 alias killgs='find . -name ".gs" | xargs rm -Rf'
 alias killds='find . -name ".DS_Store" -type f -delete'
+alias killadobe="ps axuwww | grep Adobe | grep -v grep | awk '{print \$2}' | xargs sudo kill -9"
 
 # get external ip
 alias get_external_ip="curl -L -s --max-time 10 http://checkip.dyndns.org | egrep -o -m 1 '([[:digit:]]{1,3}\.){3}[[:digit:]]{1,3}'"
