@@ -4,8 +4,9 @@ source ~/.vimrc
 
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'liuchengxu/eleline.vim'
+Plug 'tpope/vim-sensible'
 Plug 'duff/vim-bufonly'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -33,6 +34,10 @@ let NERDTreeIgnore=['\.git$', '\.DS_Store$', '\.svn$', '\.bundle$', '\.sass-cach
 let NERDTreeWinSize = 40
 " Close vim if all that's left is nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" eleline
+set laststatus=2
+let g:eleline_slim = 1
 
 " goyo
 let g:goyo_width = '60%'
