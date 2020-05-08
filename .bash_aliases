@@ -54,6 +54,7 @@ alias kgpo='kubectl get po -o wide'   # pods
 alias kd='kubectl describe "$@"'
 alias kdpo='kubectl describe po "$@"'
 alias kdno='kubectl describe no "$@"'
+alias kdcm='kubectl describe cm "$@"'
 
 alias kl='kubectl logs --tail=100  -f "$@"'
 
