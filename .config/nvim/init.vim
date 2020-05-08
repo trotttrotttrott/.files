@@ -47,3 +47,6 @@ let g:goyo_linenr = 1
 source ~/.config/nvim/coc.vim
 " only use autocomplete on go files.
 autocmd FileType * if &filetype != "go" | let b:coc_suggest_disable = 1 | endif
+
+" vim-terraform
+let g:terraform_fmt_on_save=1
