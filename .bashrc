@@ -21,6 +21,9 @@ export PATH=$PATH:$HOME/.krew/bin
 export EDITOR=nvim
 export VISUAL=$EDITOR
 
+# Ignore repeated commands in history.
+export HISTIGNORE='&:[bf]g:c:exit'
+
 current() {
   asdf current $1 | sed -e "s/ .*//"
 }
