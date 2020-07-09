@@ -21,16 +21,17 @@ for formula in \
 done
 ```
 
+## ./create-symlinks
+
 ## [Asdf](https://github.com/asdf-vm/asdf)
 
 ```bash
 for plugin in \
-  'kubectl https://github.com/Banno/asdf-kubectl.git' \
-  'nodejs https://github.com/asdf-vm/asdf-nodejs.git' \
-  'ruby https://github.com/asdf-vm/asdf-ruby.git' \
-  'tanka https://github.com/trotttrotttrott/asdf-tanka.git' \
-  'terraform https://github.com/Banno/asdf-hashicorp.git' \
-  'yarn' \
+  kubectl \
+  ruby \
+  tanka \
+  terraform \
+  'jsonnet-bundler https://github.com/trotttrotttrott/asdf-jsonnet-bundler.git' \
   ; do
     asdf plugin-add $plugin
 done
