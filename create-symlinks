@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+files=(
+  .bash_aliases
+  .bash_functions
+  .bash_profile
+  .bashrc
+  .gitconfig
+  .gitignore_global
+  .pryrc
+  .terraformrc
+  .tmux.conf
+  .vim
+  .vimrc
+  .config/nvim/coc-settings.json
+  .config/nvim/coc.vim
+  .config/nvim/init.vim
+)
+
+cd
+
+mkdir -p .config/nvim
+
+for f in "${files[@]}"; do
+  ln -sf ~/.files/$f $f
+done
