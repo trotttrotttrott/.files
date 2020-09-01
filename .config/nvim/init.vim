@@ -18,6 +18,7 @@ Plug 'gyim/vim-boxdraw'
 Plug 'aklt/plantuml-syntax'
 Plug 'scrooloose/vim-slumlord'
 Plug 'leafgarland/typescript-vim'
+Plug 'ianks/vim-tsx'
 Plug 'google/vim-jsonnet'
 Plug 'hashivim/vim-terraform'
 
