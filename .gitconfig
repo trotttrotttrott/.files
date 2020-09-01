@@ -18,6 +18,7 @@
 [core]
   editor = nvim
   excludesfile = ~/.gitignore_global
+  ignorecase = false
   quotepath = false
 
 [diff]
