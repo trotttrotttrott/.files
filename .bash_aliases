@@ -5,6 +5,7 @@ alias v='nvim'
 alias ll='ls -la -h'
 alias ls='ls -G'
 alias c='clear'
+alias ag='ag --hidden'
 
 # docker
 alias rmidang='docker rmi $(docker images --quiet --filter "dangling=true")'
