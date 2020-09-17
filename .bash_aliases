@@ -40,6 +40,7 @@ alias k='kubectl'
 alias kg='kubectl get "$@"'
 alias kgcj='kubectl get cj'           # cronjobs
 alias kgcm='kubectl get cm'           # configmaps
+alias kgds='kubectl get ds'           # daemonsets
 alias kgdep='kubectl get deploy'      # deployments
 alias kgev='kubectl get ev'           # events
 alias kgno='kubectl get no'           # nodes
