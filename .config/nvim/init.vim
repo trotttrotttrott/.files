@@ -20,6 +20,7 @@ Plug 'scrooloose/vim-slumlord'
 Plug 'leafgarland/typescript-vim'
 Plug 'ianks/vim-tsx'
 Plug 'google/vim-jsonnet'
+Plug 'jjo/vim-cue'
 Plug 'hashivim/vim-terraform'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
