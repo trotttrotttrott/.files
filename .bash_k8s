@@ -1,3 +1,46 @@
 #!/usr/bin/env bash
 
 . <(kubectl completion bash)
+
+# k8s
+alias k='kubectl'
+
+alias kg='kubectl get "$@"'
+alias kgcj='kubectl get cj'           # cronjobs
+alias kgcm='kubectl get cm'           # configmaps
+alias kgds='kubectl get ds'           # daemonsets
+alias kgdep='kubectl get deploy'      # deployments
+alias kgno='kubectl get no'           # nodes
+alias kgrs='kubectl get rs'           # replicasets
+alias kgsecrets='kubectl get secrets' # secrets
+alias kgsts='kubectl get sts'         # statefulsets
+alias kgsvc='kubectl get svc'         # services
+alias kgpo='kubectl get po -o wide'   # pods
+
+# Volumes
+alias kgpv='kubectl get pv'           # persistent volumes
+alias kgpvc='kubectl get pvc'         # persistent volume claims
+
+kgpvz() {                             # persistent volumes w/ zones
+  kubectl get pv -o json | \
+    jq '.items[] as $item | {
+      name: $item.metadata.name,
+      claimRef: "\($item.spec.claimRef.namespace)/\($item.spec.claimRef.name)",
+      zone: $item.metadata.labels["failure-domain.beta.kubernetes.io/zone"],
+    }'
+}
+
+# List Events sorted by timestamp
+alias kgev='kubectl get events --sort-by=.metadata.creationTimestamp'
+
+alias kd='kubectl describe "$@"'
+alias kdpo='kubectl describe po "$@"'
+alias kdno='kubectl describe no "$@"'
+alias kdcm='kubectl describe cm "$@"'
+alias kdpv='kubectl describe pv "$@"'
+alias kdpvc='kubectl describe pvc "$@"'
+alias kdsvc='kubectl describe svc "$@"'
+
+alias kl='kubectl logs --tail=100  -f "$@"'
+
+alias knetshoot='kubectl run --generator=run-pod/v1 tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash'

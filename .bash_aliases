@@ -33,32 +33,3 @@ alias t2pb='tmux show-buffer | pbcopy'
 
 # open something with Quick Look
 alias qlf='qlmanage -p "$@"'
-
-# k8s
-alias k='kubectl'
-
-alias kg='kubectl get "$@"'
-alias kgcj='kubectl get cj'           # cronjobs
-alias kgcm='kubectl get cm'           # configmaps
-alias kgds='kubectl get ds'           # daemonsets
-alias kgdep='kubectl get deploy'      # deployments
-alias kgev='kubectl get ev'           # events
-alias kgno='kubectl get no'           # nodes
-alias kgrs='kubectl get rs'           # replicasets
-alias kgsecrets='kubectl get secrets' # secrets
-alias kgsts='kubectl get sts'         # statefulsets
-alias kgsvc='kubectl get svc'         # services
-alias kgpo='kubectl get po -o wide'   # pods
-alias kgpv='kubectl get pv'           # persistent volumes
-alias kgpvc='kubectl get pv'          # persistent volume claims
-
-alias kd='kubectl describe "$@"'
-alias kdpo='kubectl describe po "$@"'
-alias kdno='kubectl describe no "$@"'
-alias kdcm='kubectl describe cm "$@"'
-alias kdpv='kubectl describe pv "$@"'
-alias kdpvc='kubectl describe pvc "$@"'
-
-alias kl='kubectl logs --tail=100  -f "$@"'
-
-alias knetshoot='kubectl run --generator=run-pod/v1 tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash'
