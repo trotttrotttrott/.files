@@ -43,4 +43,5 @@ alias kdsvc='kubectl describe svc "$@"'
 
 alias kl='kubectl logs --tail=100  -f "$@"'
 
-alias knetshoot='kubectl run --generator=run-pod/v1 tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash'
+alias knetshoot='kubectl run trott-netshoot --rm -i --tty --image nicolaka/netshoot -- /bin/bash'
+alias kredis='kubectl run trott-redis --rm -i --tty --image bitnami/redis:4.0.11-debian-9 -- /bin/bash'
