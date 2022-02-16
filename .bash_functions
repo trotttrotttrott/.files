@@ -53,8 +53,7 @@ flushnpm() {
 
 # serve current directory
 servedir() {
-  sleep 1 && chrome-cli open "localhost:9090" -n &
-  ruby -run -e httpd . -p 9090
+  python3 -m http.server 9090
 }
 
 # output TLS cert info
