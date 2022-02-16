@@ -5,6 +5,8 @@ source ~/.vimrc
 call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'ivalkeen/nerdtree-execute', { 'on': 'NERDTreeToggle' }
+
 Plug 'liuchengxu/eleline.vim'
 Plug 'tpope/vim-sensible'
 Plug 'duff/vim-bufonly'
@@ -22,6 +24,7 @@ Plug 'ianks/vim-tsx'
 Plug 'google/vim-jsonnet'
 Plug 'jjo/vim-cue'
 Plug 'hashivim/vim-terraform'
+Plug 'LnL7/vim-nix'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
