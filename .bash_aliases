@@ -9,6 +9,7 @@ alias ag='ag --hidden'
 
 # docker
 alias rmidang='docker rmi $(docker images --quiet --filter "dangling=true")'
+alias dprune='docker system prune'
 
 # terraform
 alias tp='terraform plan'
