@@ -30,3 +30,6 @@
 [user]
   name = Chris Trott
   email = 908409+trotttrotttrott@users.noreply.github.com
+
+[init]
+  defaultBranch = main
