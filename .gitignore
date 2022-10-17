@@ -1,1 +1,4 @@
-.vim/bundle/vim-tidal
+.vim/autoload/*
+!.vim/autoload/.keep
+.vim/tmp/*
+!.vim/tmp/.keep
