@@ -9,7 +9,7 @@ dev and my OSX host machine for basic stuff.
 
 I don't bother changing the shell anymore and default to Zsh.
 
-I use [Homebrew](https://brew.sh/) to install `git`, `tmux`, and `nvim`.
+I use [Homebrew](https://brew.sh/) to install `git`, `tmux`, `nvim`, and `pass`.
 
 I use [vim-plug](https://github.com/junegunn/vim-plug). Prefer install method of
 copying `plug.vim` to [.vim/autoload/](./vim/autoload).
