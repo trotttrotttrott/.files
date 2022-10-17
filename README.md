@@ -2,48 +2,27 @@
 
 The dot files of El Señor Christopher Douglas Trott.
 
-## [Homebrew](https://brew.sh/)
+A lot of these files are obsolete. I'm moving toward using a NixOS VM on UTM for
+dev and my OSX host machine for basic stuff.
 
-```bash
-brew install bash
-echo /usr/local/bin/bash | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/bash
-```
+## Bootstrapping OSX
 
-```bash
-for formula in \
-  bash-completion \
-  git \
-  nvim \
-  tmux\
-  krew; do
-    brew install $formula
-done
-```
+I don't bother changing the shell anymore and default to Zsh.
 
-## ./create-symlinks
+I use [Homebrew](https://brew.sh/) to install `git`, `tmux`, and `nvim`.
 
-## [Asdf](https://github.com/asdf-vm/asdf)
+I use [vim-plug](https://github.com/junegunn/vim-plug). Prefer install method of
+copying `plug.vim` to [.vim/autoload/](./vim/autoload).
 
-```bash
-for plugin in \
-  kubectl \
-  ruby \
-  tanka \
-  terraform \
-  'jsonnet-bundler https://github.com/trotttrotttrott/asdf-jsonnet-bundler.git' \
-  ; do
-    asdf plugin-add $plugin
-done
-```
+Create symlinks in your home directory for:
 
-## Neovim
+* .config/nvim/init.vim
+* .gitconfig
+* .tmux.conf
+* .vim
+* .vimrc
+* .zshrc
 
-Use [vim-plug](https://github.com/junegunn/vim-plug).
+## Bootstrapping NixOS VMs
 
-```
-python3 -m pip install --user --upgrade pynvim
-python2 -m pip install --user --upgrade pynvim
-gem install neovim
-yarn global add neovim
-```
+See [nixos-config](./nixos-config).
