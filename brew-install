@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+for f in \
+  bash \
+  bash-completion \
+  git \
+  nvim \
+  pass \
+  tmux \
+  ; do
+    brew install $f
+done

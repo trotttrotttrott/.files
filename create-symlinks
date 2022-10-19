@@ -1,20 +1,13 @@
 #!/usr/bin/env bash
 
 files=(
-  .bash_aliases
-  .bash_functions
-  .bash_profile
-  .bashrc
-  .gitconfig
-  .gitignore_global
-  .pryrc
-  .terraformrc
-  .tmux.conf
-  .vim
-  .vimrc
-  .config/nvim/coc-settings.json
-  .config/nvim/coc.vim
-  .config/nvim/init.vim
+.bash_profile
+.bashrc
+.gitconfig
+.tmux.conf
+.vim
+.vimrc
+.config/nvim/init.vim
 )
 
 cd
@@ -22,5 +15,5 @@ cd
 mkdir -p .config/nvim
 
 for f in "${files[@]}"; do
-  ln -sf ~/.files/$f $f
+  ln -sf "/Users/trott/code/github.com/trotttrotttrott/.files/$f" "$f"
 done

@@ -7,21 +7,26 @@ dev and my OSX host machine for basic stuff.
 
 ## Bootstrapping OSX
 
-I don't bother changing the shell anymore and default to Zsh.
+I use [Homebrew](https://brew.sh/).
 
-I use [Homebrew](https://brew.sh/) to install `git`, `tmux`, `nvim`, and `pass`.
+Install packages:
+```
+./brew-install
+```
+
+Change shell to bash:
+```
+echo /opt/homebrew/bin/bash | sudo tee -a /etc/shells
+chsh -s /opt/homebrew/bin/bash
+```
+
+Create symlinks in your home directory:
+```
+./create-symlinks
+```
 
 I use [vim-plug](https://github.com/junegunn/vim-plug). Prefer install method of
 copying `plug.vim` to [.vim/autoload/](./vim/autoload).
-
-Create symlinks in your home directory for:
-
-* .config/nvim/init.vim
-* .gitconfig
-* .tmux.conf
-* .vim
-* .vimrc
-* .zshrc
 
 ## Bootstrapping NixOS VMs
 
