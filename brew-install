@@ -9,6 +9,7 @@ for f in \
   node \
   nvim \
   pass \
+  shellcheck \
   tmux \
   ; do
     brew install $f
