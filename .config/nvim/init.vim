@@ -30,6 +30,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
+" Command-line mode scrolls cursor instead instead of entire buffer
+" Overrides nvim default, mouse=nvi
+set mouse=c
+
 " nerdtree
 map <c-n> :NERDTreeToggle<CR>
 let NERDTreeShowLineNumbers=1
