@@ -3,6 +3,7 @@
 for f in \
   bash \
   bash-completion \
+  gh \
   git \
   nvim \
   pass \
