@@ -5,6 +5,7 @@ for f in \
   bash-completion \
   gh \
   git \
+  htop \
   nvim \
   pass \
   tmux \
