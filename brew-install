@@ -6,6 +6,7 @@ for f in \
   gh \
   git \
   htop \
+  node \
   nvim \
   pass \
   tmux \

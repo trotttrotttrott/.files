@@ -25,6 +25,9 @@ Plug 'jjo/vim-cue'
 Plug 'hashivim/vim-terraform'
 Plug 'LnL7/vim-nix'
 
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
 
 " nerdtree
@@ -40,6 +43,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " goyo
 let g:goyo_width = '60%'
 let g:goyo_linenr = 1
+
+" coc
+source ~/.config/nvim/coc.vim
+" only use autocomplete on go files.
+autocmd FileType * if &filetype != "go" | let b:coc_suggest_disable = 1 | endif
 
 " vim-terraform
 let g:terraform_fmt_on_save=1

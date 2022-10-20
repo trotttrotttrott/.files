@@ -7,10 +7,12 @@ files=(
 .tmux.conf
 .vim
 .vimrc
+.config/nvim/coc-settings.json
+.config/nvim/coc.vim
 .config/nvim/init.vim
 )
 
-cd
+cd || exit
 
 mkdir -p .config/nvim
 
