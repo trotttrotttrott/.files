@@ -5,12 +5,10 @@ if [ -n $TMUX ]; then
   source /etc/profile
 fi
 
-alias v='nvim'
-alias ll='ls -lah'
-alias t2pb='tmux show-buffer | pbcopy'
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+
+export PATH=$PATH:$HOME/go/bin
 
 export CLICOLOR=1
 
@@ -23,3 +21,7 @@ export HISTIGNORE='&:[bf]g:c:exit'
 PS1='\[\e[;97m\]\w'
 PS1=$PS1'$(__git_ps1)'
 PS1=$PS1'\n▸ \[\e[m\]'
+
+alias v='nvim'
+alias ll='ls -lah'
+alias t2pb='tmux show-buffer | pbcopy'
