@@ -4,6 +4,8 @@ for f in \
   ag \
   bash \
   bash-completion \
+  coreutils \
+  fd \
   gh \
   git \
   git-gui \
