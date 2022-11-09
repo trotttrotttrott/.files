@@ -22,6 +22,6 @@ PS1='\[\e[;97m\]\w'
 PS1=$PS1'$(__git_ps1)'
 PS1=$PS1'\n▸ \[\e[m\]'
 
-alias v='nvim'
-alias ll='ls -lah'
-alias t2pb='tmux show-buffer | pbcopy'
+for f in ~/.bashrc.d/.*; do
+  . "$f"
+done

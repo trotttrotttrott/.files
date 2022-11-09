@@ -2,3 +2,5 @@
 !.vim/autoload/.keep
 .vim/tmp/*
 !.vim/tmp/.keep
+
+.bashrc.d/.bash_private

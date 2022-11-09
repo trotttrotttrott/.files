@@ -3,7 +3,9 @@
 files=(
 .bash_profile
 .bashrc
+.bashrc.d
 .gitconfig
+.terraformrc
 .tmux.conf
 .vim
 .vimrc

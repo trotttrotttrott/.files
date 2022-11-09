@@ -1,14 +1,22 @@
 #!/usr/bin/env bash
 
+for t in \
+  hashicorp/tap \
+  ; do
+    brew tap $t
+done
+
 for f in \
   ag \
   bash \
   bash-completion \
+  bind \
   coreutils \
   fd \
   gh \
   git \
   git-gui \
+  hashicorp/tap/terraform \
   htop \
   node \
   nvim \
