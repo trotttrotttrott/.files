@@ -22,6 +22,7 @@ for f in \
   node \
   nvim \
   pass \
+  s3cmd \
   shellcheck \
   tmux \
   ; do
