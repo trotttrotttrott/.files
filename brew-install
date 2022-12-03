@@ -19,6 +19,7 @@ for f in \
   hashicorp/tap/terraform \
   htop \
   jsonnet \
+  kubectx \
   node \
   nvim \
   pass \
