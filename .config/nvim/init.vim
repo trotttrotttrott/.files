@@ -4,29 +4,36 @@ source ~/.vimrc
 
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'ivalkeen/nerdtree-execute', { 'on': 'NERDTreeToggle' }
-
-Plug 'liuchengxu/eleline.vim'
+" tpope
 Plug 'tpope/vim-sensible'
-Plug 'duff/vim-bufonly'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
-Plug 'junegunn/goyo.vim'
-Plug 'gyim/vim-boxdraw'
+
+" Syntax
 Plug 'aklt/plantuml-syntax'
-Plug 'scrooloose/vim-slumlord'
-Plug 'leafgarland/typescript-vim'
-Plug 'ianks/vim-tsx'
 Plug 'google/vim-jsonnet'
-Plug 'jjo/vim-cue'
 Plug 'hashivim/vim-terraform'
+Plug 'ianks/vim-tsx'
+Plug 'jjo/vim-cue'
+Plug 'leafgarland/typescript-vim'
 Plug 'LnL7/vim-nix'
 
+" Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Diagrams
+Plug 'scrooloose/vim-slumlord'
+Plug 'gyim/vim-boxdraw'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+" Stuff
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'ivalkeen/nerdtree-execute', { 'on': 'NERDTreeToggle' }
+Plug 'liuchengxu/eleline.vim'
+Plug 'duff/vim-bufonly'
 
 call plug#end()
 
@@ -55,3 +62,6 @@ autocmd FileType * if &filetype != "go" | let b:coc_suggest_disable = 1 | endif
 
 " vim-terraform
 let g:terraform_fmt_on_save=1
+
+" markdown-preview
+let g:mkdp_theme = 'light'
