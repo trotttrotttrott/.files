@@ -24,7 +24,8 @@ https://mac.getutm.app/
 
 1. Select your ISO file
 
-1. Hardware: probably set memory to half (or more) of what you've got. CPU cores default?
+1. Hardware: probably set memory to half (or more) of what you've got. CPU cores
+   default? Enable hardware acceleration.
 
 1. Storage: 512 GB?
 
@@ -32,16 +33,22 @@ https://mac.getutm.app/
 
 1. Summary: rename it, check "Open VM Settings"
 
-1. Drives: create new NVMe drive with size 448 GB (arbitrary). Move it up to the top - this is so once formatted, the OS will load from here instead of the ISO mounted as a USB Drive.
+1. Drives: create new NVMe drive with size 448 GB (arbitrary). Move it up to the
+   top (this is so once formatted, the OS will load from here instead of the
+   ISO).
+
+1. Click "Save"
 
 1. Start the VM
 
 1. Select first option at GNU Grub prompt
 
-1. `sudo su`, then `passwd` - change root password to "root"
+1. `sudo su`, then `passwd` and change the password to "root"
 
 1. `ifconfig` to get the IP address
 
-1. Locally run, `NIXADDR=<ip> make vm/bootstrap0` - sets up disks, sets some config, reboots
+1. Locally run, `NIXADDR=192.168.64.14 make vm/bootstrap0` - sets up disks, sets
+   some config, reboots
 
-1. Locally run, `NIXADDR=<ip> make vm/bootstrap` - copies configs, rebuilds, reboots
+1. Locally run, `NIXADDR=192.168.64.14 make vm/bootstrap` - copies configs,
+   rebuilds, reboots

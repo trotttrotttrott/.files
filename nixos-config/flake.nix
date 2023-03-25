@@ -16,10 +16,11 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations.vm-aarch64 = nixpkgs.lib.nixosSystem {
 
       system = "aarch64-linux";
+
       modules = [
 
         ./configuration.nix

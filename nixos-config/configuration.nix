@@ -28,6 +28,9 @@
     '';
   };
 
+  # We expect to run the VM on hidpi machines.
+  hardware.video.hidpi.enable = true;
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -38,6 +41,11 @@
   # Set your time zone.
   time.timeZone = "America/New_York";
 
+  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
+  # Per-interface useDHCP will be mandatory in the future, so this generated config
+  # replicates the default behaviour.
+  networking.useDHCP = false;
+
   # Don't require password for sudo
   security.sudo.wheelNeedsPassword = false;
 
@@ -46,6 +54,33 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
+
+  # setup windowing environment
+  services.xserver = {
+    enable = true;
+    layout = "us";
+    dpi = 220;
+
+    desktopManager = {
+      xterm.enable = false;
+      wallpaper.mode = "fill";
+    };
+
+    # displayManager = {
+    #   defaultSession = "none+i3";
+    #   lightdm.enable = true;
+
+    #   # AARCH64: For now, on Apple Silicon, we must manually set the
+    #   # display resolution. This is a known issue with VMware Fusion.
+    #   # sessionCommands = ''
+    #   #   ${pkgs.xorg.xset}/bin/xset r rate 200 40
+    #   # '';
+    # };
+
+    # windowManager = {
+    #   i3.enable = true;
+    # };
+  };
 
   environment.systemPackages = with pkgs; [
     gnumake
@@ -62,11 +97,17 @@
   # easy to visit stuff in here. We only use NAT networking anyway.
   networking.firewall.enable = false;
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "22.05"; # Did you read the comment?
+  # UTM things...
+  #
+  # Interface is this on my M1
+  networking.interfaces.enp0s10.useDHCP = true;
+  # Qemu
+  services.spice-vdagentd.enable = true;
+  # For now, we need this since hardware acceleration does not work.
+  # environment.variables.LIBGL_ALWAYS_SOFTWARE = "1";
+  # Lots of stuff that uses aarch64 that claims doesn't work, but actually works.
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnsupportedSystem = true;
+
+  system.stateVersion = "22.05";
 }
