@@ -20,6 +20,7 @@ for f in \
   htop \
   jsonnet \
   kubectx \
+  kubernetes-cli \
   node \
   nvim \
   pass \
