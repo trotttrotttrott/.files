@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 files=(
+.agignore
 .bash_profile
 .bashrc
 .bashrc.d
