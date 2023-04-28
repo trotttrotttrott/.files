@@ -20,5 +20,5 @@ cd || exit
 mkdir -p .config/nvim
 
 for f in "${files[@]}"; do
-  ln -sf "/Users/trott/code/github.com/trotttrotttrott/.files/$f" "$f"
+  ln -sfh "/Users/trott/code/github.com/trotttrotttrott/.files/$f" "$f"
 done
