@@ -12,6 +12,7 @@ for f in \
   bash-completion \
   bind \
   coreutils \
+  diffutils \
   fd \
   gh \
   git \
