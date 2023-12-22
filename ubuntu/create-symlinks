@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+cd || exit
+
+files_path='/home/trott/code/github.com/trotttrotttrott/.files'
+
+for f in \
+.bashrc.d \
+; do
+  ln -sf "$files_path/$f" "$f"
+done
+
+for f in \
+.bash_logout \
+.bashrc \
+; do
+  ln -sf "$files_path/ubuntu/$f" "$f"
+done
