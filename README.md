@@ -1,3 +1,3 @@
 # .files
 
-The dot files of El Señor Christopher Douglas Trott.
+Los dot files del Señor Trott Trott Trott.
