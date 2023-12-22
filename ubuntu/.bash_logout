@@ -8,4 +8,6 @@ fi
 
 # ^^^ default
 
-ssh-agent -k
+if [ -z "$TMUX" ]; then
+  ssh-agent -k
+fi
