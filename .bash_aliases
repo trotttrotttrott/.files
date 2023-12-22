@@ -1,9 +1,8 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 # general
 alias v='nvim'
-alias ll='ls -la -h'
-alias ls='ls -G'
+alias ll='ls -lah'
 alias c='clear'
 alias ag='ag --hidden'
 
