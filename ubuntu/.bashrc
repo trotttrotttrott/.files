@@ -120,9 +120,8 @@ fi
 
 if [ -z "$TMUX" ]; then
   eval "$(ssh-agent)"
+  export PATH=$PATH:$HOME/go/bin
 fi
-
-export PATH=$PATH:$HOME/go/bin
 
 export EDITOR=nvim
 export VISUAL=$EDITOR
