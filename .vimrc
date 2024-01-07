@@ -25,6 +25,9 @@ set softtabstop=2
 set tabstop=2
 set expandtab " use soft tabs by default
 
+" Don't let vim override tabstop in markdown files
+let g:markdown_recommended_style=0
+
 " Relative Number
 augroup numbertoggle
   autocmd!
