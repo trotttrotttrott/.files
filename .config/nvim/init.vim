@@ -35,6 +35,9 @@ Plug 'ivalkeen/nerdtree-execute', { 'on': 'NERDTreeToggle' }
 Plug 'liuchengxu/eleline.vim'
 Plug 'duff/vim-bufonly'
 
+" Mine
+Plug 'odaacabeef/vim-beefdown'
+
 call plug#end()
 
 " Command-line mode scrolls cursor instead instead of entire buffer
