@@ -17,7 +17,6 @@ for f in \
   gh \
   git \
   git-gui \
-  hashicorp/tap/terraform \
   htop \
   jsonnet \
   kubectx \
