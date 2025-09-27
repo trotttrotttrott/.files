@@ -2,6 +2,8 @@
 
 1. [Homebrew](https://brew.sh/).
 
+1. Clone this repo
+
 1. Install packages
 
    ```

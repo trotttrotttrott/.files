@@ -3,7 +3,6 @@
 files=(
 .agignore
 .bash_profile
-.bashrc
 .bashrc.d
 .gitconfig
 .terraformrc
@@ -19,6 +18,10 @@ cd || exit
 
 mkdir -p .config/nvim
 
+files_path='/Users/trott/code/github.com/trotttrotttrott/.files'
+
+ln -sfh "$files_path/.bashrc" 'mac/.bashrc'
+
 for f in "${files[@]}"; do
-  ln -sfh "/Users/trott/code/github.com/trotttrotttrott/.files/$f" "$f"
+  ln -sfh "$files_path/$f" "$f"
 done
