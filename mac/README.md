@@ -1,6 +1,6 @@
 # Mac
 
-1. [Homebrew](https://brew.sh/).
+1. [Homebrew](https://brew.sh/)
 
 1. Clone this repo
 
@@ -24,5 +24,4 @@
    ./create-symlinks
    ```
 
-1. [vim-plug](https://github.com/junegunn/vim-plug). Prefer install method of
-   copying `plug.vim` to [.vim/autoload/](./vim/autoload).
+1. [vim-plug](https://github.com/junegunn/vim-plug)

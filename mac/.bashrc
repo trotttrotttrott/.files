@@ -1,12 +1,18 @@
 #!/usr/bin/env bash
 
-if [ -n $TMUX ]; then
+if [ -n "$TMUX" ]; then
   PATH=''
   source /etc/profile
 fi
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
-[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+
+for p in \
+  '/opt/homebrew/etc/profile.d/bash_completion.sh' \
+  '/Users/trott/.orbstack/shell/init.bash' \
+  ; do
+  [[ -r "$p" ]] && . "$p"
+done
 
 export PATH=$PATH:$HOME/go/bin
 
