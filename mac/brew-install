@@ -11,6 +11,7 @@ for f in \
   gh \
   git \
   git-gui \
+  gnu-sed \
   htop \
   jsonnet \
   kubectx \
