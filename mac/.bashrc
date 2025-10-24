@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-if [ -n "$TMUX" ]; then
-  PATH=''
-  source /etc/profile
-fi
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 for p in \
