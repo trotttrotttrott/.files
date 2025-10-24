@@ -12,6 +12,7 @@ files=(
 .config/nvim/coc-settings.json
 .config/nvim/coc.vim
 .config/nvim/init.vim
+.config/ghostty/config
 )
 
 cd || exit

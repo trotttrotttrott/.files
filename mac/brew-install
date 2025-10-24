@@ -28,6 +28,7 @@ for f in \
   awscli \
   azurecli \
   '--cask gcloud-cli' \
+  '--cask ghostty' \
   ; do
     brew install "$f"
 done
