@@ -94,19 +94,10 @@ highlight link diffRemoved      Statement
 highlight link diffLine         PreProc
 highlight link diffSubname      Comment
 
-call s:hifg("Normal","#EEEEEE","White",87)
-if &background == "light" || has("gui_running")
-    hi Normal guibg=Black ctermbg=Black
-else
-    hi Normal guibg=Black ctermbg=NONE
-endif
+hi Normal guibg=NONE ctermbg=NONE " support terminal transparency
+
 highlight StatusLine    guifg=Black   guibg=#aabbee gui=bold ctermfg=Black ctermbg=White  cterm=bold
 highlight StatusLineNC  guifg=#444444 guibg=#aaaaaa gui=none ctermfg=Black ctermbg=Grey   cterm=none
-"if &t_Co == 256
-    "highlight StatusLine ctermbg=117
-"else
-    "highlight StatusLine ctermbg=43
-"endif
 
 highlight Ignore        ctermfg=Black
 highlight WildMenu      guifg=Black   guibg=#ffff00 gui=bold ctermfg=Black ctermbg=Yellow cterm=bold
