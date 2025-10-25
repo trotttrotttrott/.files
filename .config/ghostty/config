@@ -44,12 +44,14 @@
 # resize-overlay-duration = 4s 200ms
 
 # ghostty +list-themes
-theme = Synthwave
+theme = Homebrew
 
 background-opacity = 0.9
 
 # ghostty +list-fonts
 font-family = Andale Mono
+font-size = 12
+font-thicken = true
 
 shell-integration = bash
 
