@@ -45,6 +45,8 @@
 
 # ghostty +list-themes
 theme = Homebrew
+# override palette color 4 from blue to fuchsia
+palette = 4=#ff00ff
 
 background-opacity = 0.9
 
