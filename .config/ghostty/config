@@ -58,3 +58,5 @@ font-thicken = true
 shell-integration = bash
 
 confirm-close-surface = false
+
+macos-titlebar-proxy-icon = hidden
