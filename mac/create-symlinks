@@ -18,6 +18,7 @@ files=(
 cd || exit
 
 mkdir -p .config/nvim
+mkdir -p .config/ghostty
 
 files_path='/Users/trott/code/github.com/trotttrotttrott/.files'
 
