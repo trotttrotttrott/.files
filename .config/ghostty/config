@@ -60,3 +60,7 @@ shell-integration = bash
 confirm-close-surface = false
 
 macos-titlebar-proxy-icon = hidden
+
+# Start windows in a maximized state
+# https://ghostty.org/docs/config/reference#maximize
+maximize = true
