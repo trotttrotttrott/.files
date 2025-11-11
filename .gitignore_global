@@ -12,3 +12,5 @@
 .sass-cache
 
 node_modules
+
+.notes.md

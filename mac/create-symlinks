@@ -5,6 +5,7 @@ files=(
 .bash_profile
 .bashrc.d
 .gitconfig
+.gitignore_global
 .terraformrc
 .tmux.conf
 .vim
