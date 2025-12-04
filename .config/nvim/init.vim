@@ -14,6 +14,7 @@ Plug 'tpope/vim-rhubarb'
 " Syntax
 Plug 'aklt/plantuml-syntax'
 Plug 'google/vim-jsonnet'
+Plug 'grafana/vim-alloy'
 Plug 'hashivim/vim-terraform'
 Plug 'ianks/vim-tsx'
 Plug 'jjo/vim-cue'
