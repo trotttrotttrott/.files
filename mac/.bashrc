@@ -10,6 +10,7 @@ for p in \
 done
 
 export PATH=$PATH:$HOME/go/bin
+. "$HOME/.cargo/env"
 
 export CLICOLOR=1
 
