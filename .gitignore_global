@@ -1,10 +1,5 @@
 .DS_Store
 
-.vim/backup/*
-!.vim/backup/.keep
-.vim/tmp/*
-!.vim/tmp/.keep
-
 .tool-versions
 
 .gs
@@ -14,3 +9,5 @@
 node_modules
 
 .notes.md
+
+**/.claude/settings.local.json
