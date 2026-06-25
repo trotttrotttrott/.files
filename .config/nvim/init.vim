@@ -65,3 +65,14 @@ let g:terraform_fmt_on_save=1
 
 " markdown-preview
 let g:mkdp_theme = 'light'
+
+" Publish nvim's cwd to tmux so prefix-" / prefix-% split from nvim's pwd
+if !empty($TMUX)
+  augroup tmux_pane_cwd
+    autocmd!
+    autocmd VimEnter,DirChanged * silent call system(
+          \ 'tmux set-option -p -t ' . $TMUX_PANE . ' @nvim_cwd ' . shellescape(getcwd()))
+    autocmd VimLeavePre * silent call system(
+          \ 'tmux set-option -p -u -t ' . $TMUX_PANE . ' @nvim_cwd')
+  augroup END
+endif
