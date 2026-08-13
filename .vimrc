@@ -51,11 +51,11 @@ au BufWritePre * :%s/\s\+$//e
 " Markdown files have 80 char line length
 au BufRead,BufNewFile *.md setlocal textwidth=80
 
-" yp copies current buffer's absolute path
-nnoremap yp :let @+=expand('%:p')<CR>
-" yd copies current buffer's directory
-nnoremap yd :let @+=expand('%:p:h')<CR>
-" yP copies current buffer's path relative to the working directory
-nnoremap yP :let @+=fnamemodify(expand('%:p'), ':.')<CR>
-" yD copies current buffer's directory relative to the working directory
-nnoremap yD :let @+=fnamemodify(expand('%:p:h'), ':.')<CR>
+" yp copies current buffer's path relative to the working directory
+nnoremap yp :let @+=fnamemodify(expand('%:p'), ':.')<CR>
+" yd copies current buffer's directory relative to the working directory
+nnoremap yd :let @+=fnamemodify(expand('%:p:h'), ':.')<CR>
+" yP copies current buffer's absolute path
+nnoremap yP :let @+=expand('%:p')<CR>
+" yD copies current buffer's directory absolute path
+nnoremap yD :let @+=expand('%:p:h')<CR>
