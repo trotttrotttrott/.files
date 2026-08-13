@@ -55,3 +55,7 @@ au BufRead,BufNewFile *.md setlocal textwidth=80
 nnoremap yp :let @+=expand('%:p')<CR>
 " yd copies current buffer's directory
 nnoremap yd :let @+=expand('%:p:h')<CR>
+" yP copies current buffer's path relative to the working directory
+nnoremap yP :let @+=fnamemodify(expand('%:p'), ':.')<CR>
+" yD copies current buffer's directory relative to the working directory
+nnoremap yD :let @+=fnamemodify(expand('%:p:h'), ':.')<CR>
