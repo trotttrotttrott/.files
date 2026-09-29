@@ -65,6 +65,19 @@ let g:terraform_fmt_on_save=1
 
 " markdown-preview
 let g:mkdp_theme = 'light'
+" Its auto-close BufHidden handler clears its augroup via bufnr('%'), which
+" isn't the hidden buffer when it's deleted from another window (e.g.
+" :Bufonly), causing E216. Upstream is unmaintained, so use <abuf> instead.
+function! s:mkdp_patch_clear_buf() abort
+  function! mkdp#autocmd#clear_buf() abort
+    let l:bufnr = expand('<abuf>') != '' ? expand('<abuf>') : bufnr('%')
+    execute 'autocmd! MKDP_REFRESH_INIT' . l:bufnr
+  endfunction
+endfunction
+augroup mkdp_patch
+  autocmd!
+  autocmd SourcePost */mkdp/autocmd.vim call s:mkdp_patch_clear_buf()
+augroup END
 
 " Publish nvim's cwd to tmux so prefix-" / prefix-% split from nvim's pwd
 if !empty($TMUX)
