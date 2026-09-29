@@ -50,6 +50,8 @@ au BufWritePre * :%s/\s\+$//e
 
 " Markdown files have 80 char line length
 au BufRead,BufNewFile *.md setlocal textwidth=80
+" Highlight fenced code blocks in markdown
+let g:markdown_fenced_languages = ['bash=sh', 'sh', 'go', 'json', 'yaml', 'python', 'typescript', 'javascript', 'lua', 'vim', 'diff']
 
 " yp copies current buffer's path relative to the working directory
 nnoremap yp :let @+=fnamemodify(expand('%:p'), ':.')<CR>
