@@ -63,6 +63,14 @@ autocmd FileType * if &filetype != "go" | let b:coc_suggest_disable = 1 | endif
 " vim-terraform
 let g:terraform_fmt_on_save=1
 
+" nvim 0.12 enables treesitter highlighting for markdown, which drops comment
+" highlighting (no bundled html parser) and ignores g:markdown_fenced_languages.
+" Stop it to fall back to the regex syntax.
+augroup markdown_no_treesitter
+  autocmd!
+  autocmd FileType markdown lua vim.treesitter.stop()
+augroup END
+
 " markdown-preview
 let g:mkdp_theme = 'light'
 " Its auto-close BufHidden handler clears its augroup via bufnr('%'), which
